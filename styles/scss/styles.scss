@@ -1,9 +1,39 @@
+@import "components/responsive";
 @import "components/color";
+@import "components/curves";
+@import "components/fonts";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
 
 .container {
-    // display: flex;
-    // justify-content: center;
-    color: violet;
-    height: 1000px;
-    width: 100px;
+    background-color: $bkg;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+
+    .principal {
+        @include wh-web(100vw, 100vh, auto, auto);
+        @include gradient($l1, $s1);
+        @include border-radius(0, 0, 50%, 50%)
+    }
+
+    .about-vis {
+        @include wh-web(70vw, 90vh, 70vw, 90vh);
+        @include border-radius(50%, 50%, 0, 0);
+        margin: 0 auto;
+        border: black 2px solid;
+    }
+
+    .about-hid {
+        @include wh-web(100vw, 100vw, auto, auto);
+        display: flex;
+        background-color: transparent;
+        border: black 2px solid;
+    }
 }

@@ -1,6 +1,16 @@
+$bkg:#FBF8F4;
+
 // lights
+
 $l1: #F0E6D7;
 $l2: #E5D3BA;
 
 
 // shadows
+$s1: #CDAA7A;
+
+
+// gradients
+@mixin gradient($light, $shadow) {
+    background: linear-gradient(135deg, $light, $shadow);
+}

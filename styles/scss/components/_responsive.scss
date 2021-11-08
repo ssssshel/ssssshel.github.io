@@ -1,0 +1,10 @@
+// medidas estandar
+
+@mixin wh-web($minw, $minh, $maxw, $maxh) {
+    min-width: $minw;
+    min-height: $minh;
+    max-width: $maxw;
+    max-height: $maxh;
+}
+
+//media query
