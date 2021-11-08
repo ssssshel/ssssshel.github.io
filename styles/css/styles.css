@@ -18,6 +18,25 @@
   font-family: "Josefin-Semibold";
   src: url(/layouts/fonts/JosefinSans-SemiBold.ttf); }
 
+.navbar {
+  min-width: 40vw;
+  min-height: 11vh;
+  max-width: auto;
+  max-height: auto;
+  border-bottom: #F0E6D7 3px solid;
+  position: absolute;
+  top: 40vh;
+  left: 20vh; }
+  .navbar .options {
+    width: 40vw;
+    display: flex;
+    flex-wrap: wrap; }
+    .navbar .options li {
+      padding-right: 1vw;
+      padding-left: 1vw; }
+      .navbar .options li a {
+        text-decoration: none; }
+
 * {
   margin: 0;
   padding: 0;
@@ -32,19 +51,23 @@
   gap: 10vh; }
   .container .principal {
     min-width: 100vw;
-    min-height: 100vh;
+    min-height: 140vh;
     max-width: auto;
     max-height: auto;
     background: linear-gradient(135deg, #F0E6D7, #CDAA7A);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 50%; }
+    border-bottom-left-radius: 50%;
+    position: relative;
+    top: -40vh;
+    margin-bottom: -40vh;
+    box-shadow: 20px 30px 10px #59422250; }
   .container .about-vis {
     min-width: 70vw;
     min-height: 90vh;
-    max-width: 70vw;
-    max-height: 90vh;
+    max-width: auto;
+    max-height: auto;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 0;
@@ -57,5 +80,4 @@
     max-width: auto;
     max-height: auto;
     display: flex;
-    background-color: transparent;
     border: black 2px solid; }

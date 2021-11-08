@@ -1,0 +1,24 @@
+.navbar {
+    @include wh-web(40vw, 11vh, auto, auto);
+    border-bottom: $l1 3px solid;
+    position: absolute;
+    top: 40vh;
+    left: 20vh;
+
+    .options {
+        width: 40vw;
+        // display: inline;
+        // list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            padding-right: 1vw;
+            padding-left: 1vw;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
