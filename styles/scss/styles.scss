@@ -3,19 +3,22 @@
 @import "components/curves";
 @import "components/fonts";
 @import "partials/principal";
+@import "partials/about";
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 .container {
     background-color: $bkg;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10vh;
 
     .principal {
@@ -26,18 +29,23 @@
         top: -40vh;
         margin-bottom: -40vh;
         box-shadow: 20px 30px 10px #59422250;
+        z-index: 1;
     }
 
-    .about-vis {
-        @include wh-web(70vw, 90vh, auto, auto);
-        @include border-radius(50%, 50%, 0, 0);
-        margin: 0 auto;
-        border: black 2px solid;
+    .zep {
+        width: 450px;
+        position: absolute;
+        top: 30vh;
+        margin-left: 2vw;
+        z-index: 2;
     }
 
-    .about-hid {
-        @include wh-web(100vw, 100vw, auto, auto);
+    .about {
         display: flex;
-        border: black 2px solid;
+        flex-direction: column;
+        gap: 10vh;
+        z-index: 3
     }
+
+
 }

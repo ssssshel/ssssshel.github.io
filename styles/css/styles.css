@@ -19,35 +19,126 @@
   src: url(/layouts/fonts/JosefinSans-SemiBold.ttf); }
 
 .navbar {
-  min-width: 40vw;
+  min-width: 45vw;
   min-height: 11vh;
   max-width: auto;
   max-height: auto;
   border-bottom: #F0E6D7 3px solid;
   position: absolute;
   top: 40vh;
-  left: 20vh; }
+  left: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 5px, 5px, 5px, #00000040; }
+  .navbar span {
+    visibility: hidden; }
   .navbar .options {
-    width: 40vw;
     display: flex;
-    flex-wrap: wrap; }
-    .navbar .options li {
-      padding-right: 1vw;
-      padding-left: 1vw; }
-      .navbar .options li a {
-        text-decoration: none; }
+    flex-direction: row;
+    gap: 4vw;
+    padding: 1vw;
+    align-items: baseline; }
+    .navbar .options #logo a {
+      text-decoration: none;
+      font-family: "Comfortaa-Bold";
+      color: #251B0E;
+      text-shadow: 5px 5px 3px #00000040;
+      font-size: 2.2rem; }
+    .navbar .options .option a {
+      text-decoration: none;
+      font-family: "Josefin-Regular";
+      color: #251B0E;
+      text-shadow: 5px 5px 3px #00000040;
+      font-size: 1.2rem; }
+
+.cardName {
+  min-width: 22vw;
+  min-height: 17vh;
+  max-width: auto;
+  max-height: auto;
+  position: absolute;
+  top: 90vh;
+  left: 13vw;
+  border-radius: 0 50px 0 50px;
+  background: linear-gradient(135deg, #CDAA7A, #67553D);
+  box-shadow: 10px 10px 5px #59422250;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh; }
+  .cardName #name {
+    font-family: "Comfortaa-Regular";
+    color: #251B0E;
+    text-shadow: 5px 5px 3px #00000040;
+    font-size: 2rem; }
+  .cardName #dev {
+    font-family: "Josefin-Regular";
+    color: #251B0E;
+    text-shadow: 5px 5px 3px #00000040;
+    font-size: 1.2rem; }
+
+.about-vis {
+  min-width: 70vw;
+  min-height: 90vh;
+  max-width: auto;
+  max-height: auto;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin: 0 auto;
+  background-color: #FBF8F4;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  align-items: center;
+  justify-content: center;
+  padding: auto 30vw; }
+  .about-vis .title {
+    font-family: "Comfortaa-Semibold";
+    color: #251B0E;
+    text-shadow: 5px 5px 3px #00000040;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 4vh; }
+  .about-vis p {
+    width: 30vw;
+    font-family: "Josefin-Regular";
+    color: #251B0E;
+    text-shadow: 5px 5px 3px #00000040;
+    font-size: 1rem;
+    text-align: justify; }
+  .about-vis a {
+    text-decoration: none;
+    font-family: "Josefin-Semibold";
+    color: #251B0E;
+    text-shadow: 5px 5px 3px #00000040;
+    font-size: 1.2rem;
+    padding-top: 10vh; }
+
+.about-hid {
+  min-width: 100vw;
+  min-height: 100vw;
+  max-width: auto;
+  max-height: auto;
+  display: flex;
+  border: black 2px solid; }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-size: 16px; }
 
 .container {
   background-color: #FBF8F4;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10vh; }
   .container .principal {
     min-width: 100vw;
@@ -62,22 +153,16 @@
     position: relative;
     top: -40vh;
     margin-bottom: -40vh;
-    box-shadow: 20px 30px 10px #59422250; }
-  .container .about-vis {
-    min-width: 70vw;
-    min-height: 90vh;
-    max-width: auto;
-    max-height: auto;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    margin: 0 auto;
-    border: black 2px solid; }
-  .container .about-hid {
-    min-width: 100vw;
-    min-height: 100vw;
-    max-width: auto;
-    max-height: auto;
+    box-shadow: 20px 30px 10px #59422250;
+    z-index: 1; }
+  .container .zep {
+    width: 450px;
+    position: absolute;
+    top: 30vh;
+    margin-left: 2vw;
+    z-index: 2; }
+  .container .about {
     display: flex;
-    border: black 2px solid; }
+    flex-direction: column;
+    gap: 10vh;
+    z-index: 3; }

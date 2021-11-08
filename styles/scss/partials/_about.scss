@@ -1,0 +1,39 @@
+.about-vis {
+    @include wh-web(70vw, 90vh, auto, auto);
+    @include border-radius(50%, 50%, 0, 0);
+    margin: 0 auto;
+    background-color: $bkg;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    align-items: center;
+    justify-content: center;
+    padding: auto 30vw;
+
+    .title {
+        @include comfSem;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 4vh;
+    }
+
+    p {
+        width: 30vw;
+        @include josReg;
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    a {
+        text-decoration: none;
+        @include josSem;
+        font-size: 1.2rem;
+        padding-top: 10vh;
+    }
+}
+
+.about-hid {
+    @include wh-web(100vw, 100vw, auto, auto);
+    display: flex;
+    border: black 2px solid;
+}
