@@ -11,10 +11,6 @@ $l2: #E5D3BA;
 $s1: #CDAA7A;
 $s2: #67553D;
 
-@mixin bigShadow($x, $y, $z) {
-    box-shadow: $x, $y, $z #59422250;
-}
-
 
 // gradients
 @mixin gradient($light, $shadow) {
