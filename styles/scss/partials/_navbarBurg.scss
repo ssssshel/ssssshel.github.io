@@ -1,10 +1,10 @@
 .navbarBurg input [type="checkbox"],
 .navbarBurg .fa-bars,
 .navbarBurg .fa-times {
-    position: absolute;
+    position: relative;
     box-sizing: border-box;
-    // margin: 0;
-    // padding: 0;
+    margin: 0;
+    padding: 0;
     width: toRem(32);
     height: toRem(32);
 }
@@ -12,6 +12,7 @@
 .navbarBurg .fa-bars,
 .navbarBurg .fa-times {
     font-size: toRem(32);
+    color: $drk;
     pointer-events: none;
 }
 
@@ -20,27 +21,38 @@
 }
 
 .navbarBurg {
-    color: white;
+    // color: white;
     position: relative;
     min-height: toRem(32);
-}
 
-.navbarBurg nav {
-    display: none;
+    nav {
+        display: none;
+        //width: 100vw;
+        //height: 100%;
+        //position: absolute;
 
-    ul {
-        li {
-            a {
-                text-decoration: none;
-                @include fontSettings("Urbanist-Regular", $drk, toRem(16));
+        ul {
+            li {
+                a {
+                    text-decoration: none;
+                    @include fontSettings("Urbanist-Regular", $drk, toRem(16));
+                    // padding: 10px 20px;
+                    // width: 100%;
+                    // background-color: $lgt;
 
+                }
             }
         }
     }
 }
 
+
+
 .navbarBurg input:checked~nav {
+    // position: absolute;
     display: block;
+    // width: 100vw;
+    // height: 100%;
 }
 
 .navbarBurg input:checked~.fa-bars {

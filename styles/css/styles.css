@@ -22,8 +22,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
-  font-size: 16px; }
+  overflow-x: hidden; }
 
 .container {
   width: 100%;
@@ -36,38 +35,61 @@
       width: 100%;
       height: 100vh;
       background-color: #E5D3BA; }
-      .container .principal .navbar {
-        height: 4rem;
-        max-height: 4rem;
-        width: 100vw;
-        background-color: black; }
-        .container .principal .navbar .navbarBurg input [type="checkbox"],
-        .container .principal .navbar .navbarBurg .fa-bars,
-        .container .principal .navbar .navbarBurg .fa-times {
-          position: absolute;
+      .container .principal .navbarHid {
+        height: 4.375rem;
+        max-height: 4.375rem;
+        width: 100%;
+        position: fixed;
+        padding: 2.625rem;
+        z-index: 5;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #FBF8F4;
+        backdrop-filter: blur(0.0625rem); }
+        .container .principal .navbarHid .navbarBurg input [type="checkbox"],
+        .container .principal .navbarHid .navbarBurg .fa-bars,
+        .container .principal .navbarHid .navbarBurg .fa-times {
+          position: relative;
           box-sizing: border-box;
+          margin: 0;
+          padding: 0;
           width: 2rem;
           height: 2rem; }
-        .container .principal .navbar .navbarBurg .fa-bars,
-        .container .principal .navbar .navbarBurg .fa-times {
+        .container .principal .navbarHid .navbarBurg .fa-bars,
+        .container .principal .navbarHid .navbarBurg .fa-times {
           font-size: 2rem;
+          color: #251B0E;
           pointer-events: none; }
-        .container .principal .navbar .navbarBurg input[type="checkbox"] {
+        .container .principal .navbarHid .navbarBurg input[type="checkbox"] {
           opacity: 0; }
-        .container .principal .navbar .navbarBurg {
-          color: white;
+        .container .principal .navbarHid .navbarBurg {
           position: relative;
           min-height: 2rem; }
-        .container .principal .navbar .navbarBurg nav {
-          display: none; }
-          .container .principal .navbar .navbarBurg nav ul li a {
-            text-decoration: none;
-            font-family: "Urbanist-Regular";
-            color: #251B0E;
-            font-size: 1rem/16rem; }
-        .container .principal .navbar .navbarBurg input:checked ~ nav {
+          .container .principal .navbarHid .navbarBurg nav {
+            display: none; }
+            .container .principal .navbarHid .navbarBurg nav ul li a {
+              text-decoration: none;
+              font-family: "Urbanist-Regular";
+              color: #251B0E;
+              font-size: 1rem/16rem; }
+        .container .principal .navbarHid .navbarBurg input:checked ~ nav {
           display: block; }
-        .container .principal .navbar .navbarBurg input:checked ~ .fa-bars {
+        .container .principal .navbarHid .navbarBurg input:checked ~ .fa-bars {
           display: none; }
-        .container .principal .navbar .navbarBurg input:not(:checked) ~ .fa-times {
-          display: none; } }
+        .container .principal .navbarHid .navbarBurg input:not(:checked) ~ .fa-times {
+          display: none; }
+        .container .principal .navbarHid .logo {
+          box-sizing: border-box;
+          width: 5.75rem;
+          height: 2.6875rem;
+          position: relative;
+          background-color: transparent;
+          border: #251B0E 0.125rem solid;
+          text-decoration: none; }
+          .container .principal .navbarHid .logo .contentLogo span {
+            font-family: "Comfortaa-Light";
+            color: #251B0E;
+            font-size: 1.875rem; } }

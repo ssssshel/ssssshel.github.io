@@ -7,7 +7,6 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    font-size: 16px;
 }
 
 .container {
@@ -23,13 +22,38 @@
             height: 100vh;
             background-color: $bas;
 
-            .navbar {
-                height: 4rem;
-                max-height: 4rem;
-                width: 100vw;
-                background-color: black;
-
+            .navbarHid {
+                height: toRem(70);
+                max-height: toRem(70);
+                width: 100%;
+                position: fixed;
+                padding: toRem(42);
+                z-index: 5;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                background-color: $lgt;
+                backdrop-filter: blur(toRem(1));
+                // -webkit-filter: blur(2px);
                 @import "partials/navbarBurg";
+
+                .logo {
+                    box-sizing: border-box;
+                    width: toRem(92);
+                    height: toRem(43);
+                    position: relative;
+                    background-color: transparent;
+                    border: $drk toRem(2) solid;
+                    text-decoration: none;
+
+                    .contentLogo {
+                        span {
+                            @include fontSettings("Comfortaa-Light", $drk, 30);
+                        }
+                    }
+                }
             }
         }
     }
