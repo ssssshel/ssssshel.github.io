@@ -7,170 +7,16 @@
   src: url(/layouts/fonts/Comfortaa-SemiBold.ttf); }
 
 @font-face {
-  font-family: "Comfortaa-Bold";
-  src: url(/layouts/fonts/Comfortaa-Bold.ttf); }
+  font-family: "Comfortaa-Light";
+  src: url(/layouts/fonts/Comfortaa-Light.ttf); }
 
 @font-face {
-  font-family: "Josefin-Regular";
-  src: url(/layouts/fonts/JosefinSans-Regular.ttf); }
+  font-family: "Urbanist-Regular";
+  src: url(/layouts/fonts/Urbanist-Regular.ttf); }
 
 @font-face {
-  font-family: "Josefin-Semibold";
-  src: url(/layouts/fonts/JosefinSans-SemiBold.ttf); }
-
-.navbar {
-  min-width: 45vw;
-  min-height: 11vh;
-  max-width: auto;
-  max-height: auto;
-  border-bottom: #F0E6D7 3px solid;
-  position: absolute;
-  top: 40vh;
-  left: 20vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 5px, 5px, 5px, #00000040; }
-  .navbar span {
-    visibility: hidden; }
-  .navbar .options {
-    display: flex;
-    flex-direction: row;
-    gap: 4vw;
-    padding: 1vw;
-    align-items: baseline; }
-    .navbar .options #logo a {
-      text-decoration: none;
-      font-family: "Comfortaa-Bold";
-      color: #251B0E;
-      text-shadow: 5px 5px 3px #00000040;
-      font-size: 2.2rem; }
-    .navbar .options .option a {
-      text-decoration: none;
-      font-family: "Josefin-Regular";
-      color: #251B0E;
-      text-shadow: 5px 5px 3px #00000040;
-      font-size: 1.2rem; }
-
-.cardName {
-  min-width: 22vw;
-  min-height: 17vh;
-  max-width: auto;
-  max-height: auto;
-  position: absolute;
-  top: 90vh;
-  left: 13vw;
-  border-radius: 0 50px 0 50px;
-  background: linear-gradient(135deg, #CDAA7A, #67553D);
-  box-shadow: 10px 10px 5px #59422250;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2vh; }
-  .cardName #name {
-    font-family: "Comfortaa-Regular";
-    color: #251B0E;
-    text-shadow: 5px 5px 3px #00000040;
-    font-size: 2rem; }
-  .cardName #dev {
-    font-family: "Josefin-Regular";
-    color: #251B0E;
-    text-shadow: 5px 5px 3px #00000040;
-    font-size: 1.2rem; }
-
-.about-vis {
-  min-width: 70vw;
-  min-height: 90vh;
-  max-width: auto;
-  max-height: auto;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  margin: 0 auto;
-  background-color: #FBF8F4;
-  display: flex;
-  flex-direction: column;
-  gap: 3vh;
-  align-items: center;
-  justify-content: center;
-  padding: auto 30vw; }
-  .about-vis .title {
-    font-family: "Comfortaa-Semibold";
-    color: #251B0E;
-    text-shadow: 5px 5px 3px #00000040;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 4vh; }
-  .about-vis p {
-    width: 30vw;
-    font-family: "Josefin-Regular";
-    color: #251B0E;
-    text-shadow: 5px 5px 3px #00000040;
-    font-size: 1rem;
-    text-align: justify; }
-  .about-vis a {
-    text-decoration: none;
-    font-family: "Josefin-Semibold";
-    color: #251B0E;
-    text-shadow: 5px 5px 3px #00000040;
-    font-size: 1.2rem;
-    padding-top: 10vh; }
-
-.about-hid {
-  min-width: 100vw;
-  min-height: 110vh;
-  max-width: auto;
-  max-height: auto;
-  display: flex;
-  align-items: center; }
-  .about-hid .about-hid-a {
-    position: relative;
-    min-width: 45vw;
-    min-height: 100vh;
-    max-width: auto;
-    max-height: auto;
-    border-top-left-radius: 65%;
-    border-top-right-radius: 35%;
-    border-bottom-right-radius: 30%;
-    border-bottom-left-radius: 0%;
-    background: linear-gradient(135deg, #E5D3BA, #67553D);
-    box-shadow: 20px 30px 10px #88878550;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20vh; }
-    .about-hid .about-hid-a img {
-      width: 22rem;
-      position: relative;
-      top: 15vh;
-      border-top-left-radius: 20%;
-      border-top-right-radius: 20%;
-      border-bottom-right-radius: 25%;
-      border-bottom-left-radius: 0%;
-      box-shadow: 15px 25px 6px #251b0e36; }
-    .about-hid .about-hid-a span {
-      position: relative;
-      right: -5vw;
-      font-family: "Josefin-Regular";
-      color: #251B0E;
-      text-shadow: 5px 5px 3px #00000040;
-      font-size: 1.1rem; }
-  .about-hid .about-hid-b {
-    position: relative;
-    left: -7vw;
-    min-width: 43vw;
-    min-height: 78vh;
-    max-width: auto;
-    max-height: 85vh;
-    border-top-left-radius: 0%;
-    border-top-right-radius: 20%;
-    border-bottom-right-radius: 75%;
-    border-bottom-left-radius: 40%;
-    background-color: #e5d3ba0e;
-    backdrop-filter: blur(2rem);
-    filter: brightness(0.9); }
+  font-family: "Urbanist-Semibold";
+  src: url(/layouts/fonts/Urbanist-SemiBold.ttf); }
 
 * {
   margin: 0;
@@ -180,35 +26,48 @@
   font-size: 16px; }
 
 .container {
+  width: 100%;
   background-color: #FBF8F4;
-  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10vh; }
-  .container .principal {
-    min-width: 100vw;
-    min-height: 140vh;
-    max-width: auto;
-    max-height: auto;
-    background: linear-gradient(135deg, #F0E6D7, #CDAA7A);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    position: relative;
-    top: -40vh;
-    margin-bottom: -40vh;
-    box-shadow: 20px 30px 10px #59422250;
-    z-index: 1; }
-  .container .zep {
-    width: 450px;
-    position: absolute;
-    top: 30vh;
-    margin-left: 2vw;
-    z-index: 2; }
-  .container .about {
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    z-index: 3; }
+  align-items: center; }
+  @media (max-width: 37.4375rem) {
+    .container .principal {
+      width: 100%;
+      height: 100vh;
+      background-color: #E5D3BA; }
+      .container .principal .navbar {
+        height: 4rem;
+        max-height: 4rem;
+        width: 100vw;
+        background-color: black; }
+        .container .principal .navbar .navbarBurg input [type="checkbox"],
+        .container .principal .navbar .navbarBurg .fa-bars,
+        .container .principal .navbar .navbarBurg .fa-times {
+          position: absolute;
+          box-sizing: border-box;
+          width: 2rem;
+          height: 2rem; }
+        .container .principal .navbar .navbarBurg .fa-bars,
+        .container .principal .navbar .navbarBurg .fa-times {
+          font-size: 2rem;
+          pointer-events: none; }
+        .container .principal .navbar .navbarBurg input[type="checkbox"] {
+          opacity: 0; }
+        .container .principal .navbar .navbarBurg {
+          color: white;
+          position: relative;
+          min-height: 2rem; }
+        .container .principal .navbar .navbarBurg nav {
+          display: none; }
+          .container .principal .navbar .navbarBurg nav ul li a {
+            text-decoration: none;
+            font-family: "Urbanist-Regular";
+            color: #251B0E;
+            font-size: 1rem/16rem; }
+        .container .principal .navbar .navbarBurg input:checked ~ nav {
+          display: block; }
+        .container .principal .navbar .navbarBurg input:checked ~ .fa-bars {
+          display: none; }
+        .container .principal .navbar .navbarBurg input:not(:checked) ~ .fa-times {
+          display: none; } }

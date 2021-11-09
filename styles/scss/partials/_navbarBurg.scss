@@ -1,0 +1,52 @@
+.navbarBurg input [type="checkbox"],
+.navbarBurg .fa-bars,
+.navbarBurg .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    // margin: 0;
+    // padding: 0;
+    width: toRem(32);
+    height: toRem(32);
+}
+
+.navbarBurg .fa-bars,
+.navbarBurg .fa-times {
+    font-size: toRem(32);
+    pointer-events: none;
+}
+
+.navbarBurg input[type="checkbox"] {
+    opacity: 0;
+}
+
+.navbarBurg {
+    color: white;
+    position: relative;
+    min-height: toRem(32);
+}
+
+.navbarBurg nav {
+    display: none;
+
+    ul {
+        li {
+            a {
+                text-decoration: none;
+                @include fontSettings("Urbanist-Regular", $drk, toRem(16));
+
+            }
+        }
+    }
+}
+
+.navbarBurg input:checked~nav {
+    display: block;
+}
+
+.navbarBurg input:checked~.fa-bars {
+    display: none;
+}
+
+.navbarBurg input:not(:checked)~.fa-times {
+    display: none;
+}

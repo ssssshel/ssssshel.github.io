@@ -1,40 +1,39 @@
-// medidas estandar
-
-@mixin wh-web($minw, $minh, $maxw, $maxh) {
-    min-width: $minw;
-    min-height: $minh;
-    max-width: $maxw;
-    max-height: $maxh;
-}
-
 //media query
 
 @mixin phone {
-    @media(max-width: 599px) {
+    @media(max-width: 37.4375rem) {
         @content;
     }
 }
 
 @mixin tablet-portrait {
-    @media(min-width: 600px) {
+    @media(min-width: 37.5rem) {
         @content;
     }
 }
 
 @mixin tablet-landscape {
-    @media(min-width: 900px) {
+    @media(min-width: 56.25rem) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media(min-width: 1200px) {
+    @media(min-width: 75rem) {
         @content;
     }
 }
 
 @mixin big-desktop {
-    @media(min-width: 1800px) {
+    @media(min-width: 112.5rem) {
         @content;
     }
+}
+
+
+// de pixels a rem
+
+@function toRem($value) {
+    $remValue: ($value/16) + rem;
+    @return $remValue;
 }

@@ -9,46 +9,23 @@
 }
 
 @font-face {
-    font-family: "Comfortaa-Bold";
-    src: url(/layouts/fonts/Comfortaa-Bold.ttf);
+    font-family: "Comfortaa-Light";
+    src: url(/layouts/fonts/Comfortaa-Light.ttf);
 }
 
 @font-face {
-    font-family: "Josefin-Regular";
-    src: url(/layouts/fonts/JosefinSans-Regular.ttf);
+    font-family: "Urbanist-Regular";
+    src: url(/layouts/fonts/Urbanist-Regular.ttf);
 }
 
 @font-face {
-    font-family: "Josefin-Semibold";
-    src: url(/layouts/fonts/JosefinSans-SemiBold.ttf);
+    font-family: "Urbanist-Semibold";
+    src: url(/layouts/fonts/Urbanist-SemiBold.ttf);
 }
 
-@mixin comfReg {
-    font-family: "Comfortaa-Regular";
-    color: $drk;
-    text-shadow: 5px 5px 3px #00000040;
-}
 
-@mixin comfSem {
-    font-family: "Comfortaa-Semibold";
-    color: $drk;
-    text-shadow: 5px 5px 3px #00000040;
-}
-
-@mixin comfBol {
-    font-family: "Comfortaa-Bold";
-    color: $drk;
-    text-shadow: 5px 5px 3px #00000040;
-}
-
-@mixin josReg {
-    font-family: "Josefin-Regular";
-    color: $drk;
-    text-shadow: 5px 5px 3px #00000040;
-}
-
-@mixin josSem {
-    font-family: "Josefin-Semibold";
-    color: $drk;
-    text-shadow: 5px 5px 3px #00000040;
+@mixin fontSettings($nom, $col, $siz) {
+    font-family: $nom;
+    color: $col;
+    font-size: ($siz/16) + rem;
 }
