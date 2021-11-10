@@ -26,61 +26,53 @@
 
 .container {
   width: 100%;
+  height: 100vh;
   background-color: #FBF8F4;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  z-index: 0; }
   @media (max-width: 37.4375rem) {
     .container .principal {
       width: 100%;
       height: 100vh;
-      background-color: #E5D3BA; }
+      background-color: #E5D3BA;
+      z-index: 1;
+      /* NAV */ }
       .container .principal .navbarHid {
         height: 4.375rem;
-        max-height: 4.375rem;
         width: 100%;
         position: fixed;
         padding: 2.625rem;
-        z-index: 5;
+        z-index: 3;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: space-between;
-        background-color: #FBF8F4;
-        backdrop-filter: blur(0.0625rem); }
-        .container .principal .navbarHid .navbarBurg input [type="checkbox"],
-        .container .principal .navbarHid .navbarBurg .fa-bars,
-        .container .principal .navbarHid .navbarBurg .fa-times {
+        background-color: #e5d3ba65;
+        filter: brightness(1.1);
+        backdrop-filter: blur(0.125rem); }
+        .container .principal .navbarHid #btnBurg {
           position: relative;
           box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-          width: 2rem;
-          height: 2rem; }
-        .container .principal .navbarHid .navbarBurg .fa-bars,
-        .container .principal .navbarHid .navbarBurg .fa-times {
-          font-size: 2rem;
-          color: #251B0E;
-          pointer-events: none; }
-        .container .principal .navbarHid .navbarBurg input[type="checkbox"] {
-          opacity: 0; }
-        .container .principal .navbarHid .navbarBurg {
-          position: relative;
-          min-height: 2rem; }
-          .container .principal .navbarHid .navbarBurg nav {
+          width: 1.875rem;
+          height: 1.875rem;
+          background-color: transparent;
+          border: none; }
+          .container .principal .navbarHid #btnBurg .fa-bars {
+            width: 2.1875rem;
+            position: relative;
+            top: 0.3125rem;
+            margin-bottom: 0.625rem;
+            color: #251B0E;
+            pointer-events: none; }
+          .container .principal .navbarHid #btnBurg .fa-times {
+            width: 1.5625rem;
+            color: #251B0E;
+            pointer-events: none; }
+          .container .principal .navbarHid #btnBurg .fa-bars.hid {
             display: none; }
-            .container .principal .navbarHid .navbarBurg nav ul li a {
-              text-decoration: none;
-              font-family: "Urbanist-Regular";
-              color: #251B0E;
-              font-size: 1rem/16rem; }
-        .container .principal .navbarHid .navbarBurg input:checked ~ nav {
-          display: block; }
-        .container .principal .navbarHid .navbarBurg input:checked ~ .fa-bars {
-          display: none; }
-        .container .principal .navbarHid .navbarBurg input:not(:checked) ~ .fa-times {
-          display: none; }
         .container .principal .navbarHid .logo {
           box-sizing: border-box;
           width: 5.75rem;
@@ -88,8 +80,38 @@
           position: relative;
           background-color: transparent;
           border: #251B0E 0.125rem solid;
-          text-decoration: none; }
+          text-decoration: none;
+          text-align: right; }
           .container .principal .navbarHid .logo .contentLogo span {
             font-family: "Comfortaa-Light";
             color: #251B0E;
-            font-size: 1.875rem; } }
+            font-size: 1.875rem; }
+      .container .principal .navHid {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.6);
+        top: 4.375rem;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        z-index: 3;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #e5d3ba65;
+        backdrop-filter: blur(0.125rem);
+        filter: brightness(1.1); }
+        .container .principal .navHid ul {
+          display: flex;
+          flex-direction: column;
+          gap: 20px; }
+          .container .principal .navHid ul li a {
+            text-decoration: none;
+            font-family: "Urbanist-Regular";
+            color: #251B0E;
+            font-size: 0.9375rem/16rem; }
+      .container .principal .navHid.see {
+        left: 0; }
+      .container .principal .nav a {
+        padding: 1rem; } }
