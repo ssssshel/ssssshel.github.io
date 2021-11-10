@@ -11,7 +11,7 @@
 
 .container {
     width: 100%;
-    height: 100vh;
+    // height: 100%;
     background-color: $lgt;
     display: flex;
     flex-direction: column;
@@ -20,18 +20,28 @@
 
     @include phone {
         .principal {
+            position: relative;
             width: 100%;
             height: 100vh;
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             background-color: $bas;
             z-index: 1;
 
+            .navbarVis {
+                display: none;
+            }
+
             .navbarHid {
-                height: toRem(70);
-                // max-height: 10vh;
+                height: 8%;
                 width: 100%;
+                box-sizing: border-box;
                 position: fixed;
-                // margin-bottom: toRem(10);
-                padding: toRem(42);
+                padding-left: toRem(42);
+                padding-right: toRem(42);
                 z-index: 3;
                 display: flex;
                 flex-direction: row;
@@ -39,8 +49,8 @@
                 align-items: center;
                 justify-content: space-between;
                 background-color: #e5d3ba65;
-                filter: brightness(1.1);
-                backdrop-filter: blur(toRem(2));
+                filter: brightness(1.15);
+                backdrop-filter: blur(toRem(20));
                 @import "partials/navbarBurg";
 
                 .logo {
@@ -65,28 +75,32 @@
 
             .navHid {
                 position: fixed;
-                background: rgba(0, 0, 0, 0.6);
-                top: toRem(70);
+                top: 8%;
                 left: -100%;
                 width: 100%;
-                height: 100vh;
+                height: 92%;
+                padding-left: toRem(42);
+                padding-right: toRem(42);
                 // max-height: 90vh;
                 z-index: 3;
                 overflow-y: hidden;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 background-color: #e5d3ba65;
-                backdrop-filter: blur(toRem(2));
+                backdrop-filter: blur(toRem(20));
                 filter: brightness(1.1);
 
                 ul {
+                    position: relative;
+                    top: toRem(40);
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
+                    gap: toRem(30);
 
                     li {
+                        padding-bottom: toRem(10);
+                        border-bottom: toRem(1) solid $drk;
+
                         a {
                             text-decoration: none;
                             @include fontSettings("Urbanist-Regular", $drk, toRem(15));
@@ -100,10 +114,53 @@
                 left: 0;
             }
 
+            .card {
+                position: relative;
+                bottom: toRem(-500);
+                left: toRem(-90);
+                width: toRem(207);
+                height: toRem(100);
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: toRem(10);
+                background-color: $drk;
 
-            .nav a {
-                padding: 1rem;
+                .name {
+                    @include fontSettings("Comfortaa-Light", $lgt, 24);
+                }
+
+                .dev {
+                    @include fontSettings("Urbanist-Regular", $lgt, 14)
+                }
             }
+
+            .zep {
+                position: relative;
+                left: toRem(10);
+                bottom: toRem(50);
+                width: toRem(300)
+            }
+
+            .sqr {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 15%;
+                background-color: #e5d3ba65;
+                backdrop-filter: blur(toRem(20));
+                filter: brightness(1.1);
+                z-index: 2;
+            }
+        }
+
+        .aboutVis {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            z-index: 2;
+
         }
     }
 }
