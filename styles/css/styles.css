@@ -68,7 +68,8 @@
           width: 1.875rem;
           height: 1.875rem;
           background-color: transparent;
-          border: none; }
+          border: none;
+          overflow-y: hidden; }
           .container .principal .navbarHid #btnBurg .fa-bars {
             width: 2.1875rem;
             position: relative;
