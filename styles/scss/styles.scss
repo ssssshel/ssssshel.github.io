@@ -371,11 +371,14 @@
             .portrait {
                 height: 100vh;
                 overflow-y: hidden;
+                display: inline-block;
+                text-align: center;
 
                 .projectsTitle {
                     position: absolute;
+                    transform: translate(20%, 1100%);
 
-                    @include fontSettings("Comfortaa-Regular", $lgt, 30)
+                    @include fontSettings("Comfortaa-SemiBold", $lgt, 30)
                 }
             }
 
@@ -387,6 +390,83 @@
                         object-position:
                             center center;
                     }
+                }
+            }
+
+            .containerProjects {
+                .projectsGrid {
+                    display: grid;
+                    grid-template-columns: 100%;
+                    grid-template-rows: auto auto auto auto auto;
+                    row-gap: 1%;
+                    padding-top: toRem(40);
+                    padding-left: toRem(42);
+                    padding-right: toRem(42);
+                    overflow-y: hidden;
+
+                    .project {
+                        height: 50vh;
+                        width: auto;
+                        overflow-y: hidden;
+
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                            filter: brightness(0.6);
+                        }
+
+                        img:hover {
+                            filter: brightness(1.0);
+                        }
+
+                        .projectHover {
+                            width: 50%;
+                            height: 35vh;
+                            position: relative;
+                            top: -18rem;
+                            left: 2rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: toRem(20);
+                            overflow-y: hidden;
+                            opacity: 1;
+
+                            .projectName {
+                                @include fontSettings("Comfortaa-Regular", $lgt, 20)
+                            }
+
+                            .projectDesc {
+                                overflow-y: hidden;
+                                line-height: toRem(30);
+                                @include fontSettings("Urbanist-Regular", $lgt, 15)
+                            }
+
+                            input {
+                                width: 25vw;
+                                height: 12%;
+                                background-color: rgba(245, 222, 179, 0.363);
+                                backdrop-filter: blur(10);
+                                border: none;
+                            }
+                        }
+
+                        .projectHover.hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    @supports (object-fit:cover) {
+                        .project {
+                            img {
+                                height: 100%;
+                                object-fit: cover;
+                                object-position:
+                                    center center;
+                            }
+                        }
+                    }
+
                 }
             }
         }
