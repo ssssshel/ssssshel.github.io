@@ -98,7 +98,7 @@
             font-size: 1.875rem; }
       .container .principal .navHid {
         position: fixed;
-        top: 8%;
+        bottom: 0;
         left: -100%;
         width: 100%;
         height: 92%;
@@ -362,16 +362,18 @@
         padding-left: 2.625rem;
         padding-right: 2.625rem;
         overflow-y: hidden; }
+        .container .projects .containerProjects .projectsGrid .project:hover .projectImg {
+          filter: brightness(1); }
+        .container .projects .containerProjects .projectsGrid .project:hover .projectHover {
+          opacity: 1; }
         .container .projects .containerProjects .projectsGrid .project {
           height: 50vh;
           width: auto;
           overflow-y: hidden; }
-          .container .projects .containerProjects .projectsGrid .project img {
+          .container .projects .containerProjects .projectsGrid .project .projectImg {
             width: 100%;
             height: auto;
             filter: brightness(0.6); }
-          .container .projects .containerProjects .projectsGrid .project img:hover {
-            filter: brightness(1); }
           .container .projects .containerProjects .projectsGrid .project .projectHover {
             width: 50%;
             height: 35vh;
@@ -382,7 +384,7 @@
             flex-direction: column;
             gap: 1.25rem;
             overflow-y: hidden;
-            opacity: 1; }
+            opacity: 0; }
             .container .projects .containerProjects .projectsGrid .project .projectHover .projectName {
               font-family: "Comfortaa-Regular";
               color: #FBF8F4;
@@ -398,11 +400,14 @@
               height: 12%;
               background-color: rgba(245, 222, 179, 0.363);
               backdrop-filter: blur(10);
-              border: none; }
-          .container .projects .containerProjects .projectsGrid .project .projectHover.hover {
-            opacity: 1; }
+              border: none;
+              font-family: "Urbanist-Regular";
+              color: #FBF8F4;
+              font-size: 0.9375rem;
+              text-align: left;
+              padding-left: 0.3125rem; }
         @supports (object-fit: cover) {
-          .container .projects .containerProjects .projectsGrid .project img {
+          .container .projects .containerProjects .projectsGrid .project .projectImg {
             height: 100%;
             object-fit: cover;
             object-position: center center; } } }

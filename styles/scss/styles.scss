@@ -76,7 +76,8 @@
 
             .navHid {
                 position: fixed;
-                top: 8%;
+                // top: 8%;
+                bottom: 0;
                 left: -100%;
                 width: 100%;
                 height: 92%;
@@ -404,21 +405,28 @@
                     padding-right: toRem(42);
                     overflow-y: hidden;
 
+                    .project:hover {
+                        .projectImg {
+                            filter: brightness(1.0)
+                        }
+
+                        .projectHover {
+                            opacity: 1;
+                        }
+                    }
+
                     .project {
                         height: 50vh;
                         width: auto;
                         overflow-y: hidden;
 
 
-                        img {
+                        .projectImg {
                             width: 100%;
                             height: auto;
                             filter: brightness(0.6);
                         }
 
-                        img:hover {
-                            filter: brightness(1.0);
-                        }
 
                         .projectHover {
                             width: 50%;
@@ -430,7 +438,7 @@
                             flex-direction: column;
                             gap: toRem(20);
                             overflow-y: hidden;
-                            opacity: 1;
+                            opacity: 0;
 
                             .projectName {
                                 @include fontSettings("Comfortaa-Regular", $lgt, 20)
@@ -448,17 +456,16 @@
                                 background-color: rgba(245, 222, 179, 0.363);
                                 backdrop-filter: blur(10);
                                 border: none;
+                                @include fontSettings("Urbanist-Regular", $lgt, 15);
+                                text-align: left;
+                                padding-left: toRem(5);
                             }
-                        }
-
-                        .projectHover.hover {
-                            opacity: 1;
                         }
                     }
 
                     @supports (object-fit:cover) {
                         .project {
-                            img {
+                            .projectImg {
                                 height: 100%;
                                 object-fit: cover;
                                 object-position:
