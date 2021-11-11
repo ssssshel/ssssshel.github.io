@@ -98,8 +98,8 @@
             font-size: 1.875rem; }
       .container .principal .navHid {
         position: fixed;
-        top: 8%;
-        bottom: -9%;
+        top: 0;
+        bottom: 0;
         left: -100%;
         width: 100%;
         height: 110%;
@@ -114,7 +114,7 @@
         filter: brightness(1.1); }
         .container .principal .navHid ul {
           position: relative;
-          top: 2.5rem;
+          top: 6.25rem;
           display: flex;
           flex-direction: column;
           gap: 1.875rem;

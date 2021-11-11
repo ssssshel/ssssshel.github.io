@@ -76,9 +76,9 @@
 
             .navHid {
                 position: fixed;
-                top: 8%;
+                top: 0;
 
-                bottom: -9%;
+                bottom: 0;
                 left: -100%;
                 width: 100%;
                 height: 110%;
@@ -95,7 +95,7 @@
 
                 ul {
                     position: relative;
-                    top: toRem(40);
+                    top: toRem(100);
                     display: flex;
                     flex-direction: column;
                     gap: toRem(30);
