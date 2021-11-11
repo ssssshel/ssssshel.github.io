@@ -360,6 +360,7 @@
         grid-template-rows: auto auto auto auto auto;
         row-gap: 1%;
         padding-top: 2.5rem;
+        padding-bottom: 7.5rem;
         padding-left: 2.625rem;
         padding-right: 2.625rem;
         overflow-y: hidden; }
@@ -411,4 +412,45 @@
           .container .projects .containerProjects .projectsGrid .project .projectImg {
             height: 100%;
             object-fit: cover;
-            object-position: center center; } } }
+            object-position: center center; } }
+    .container .footer {
+      width: 100%;
+      height: 95vh;
+      padding-left: 2.625rem;
+      padding-right: 2.625rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3.125rem;
+      flex-direction: column;
+      background-color: #AB9D8A;
+      background: linear-gradient(180deg, #AB9D8A, #AB9D8A, #AB9D8A, #AB9D8A, #AB9D8A, #251B0E); }
+      .container .footer h1 {
+        text-align: center;
+        font-family: "Comfortaa-Regular";
+        color: #251B0E;
+        font-size: 1.875rem; }
+      .container .footer .contact {
+        text-align: center;
+        font-family: "Urbanist-Regular";
+        color: #251B0E;
+        font-size: 1.25rem; }
+      .container .footer .icons {
+        display: flex;
+        gap: 0.625rem; }
+        .container .footer .icons i {
+          font-size: 1.125rem;
+          color: #251B0E; }
+      .container .footer .otherOption {
+        text-align: center;
+        font-family: "Urbanist-Regular";
+        color: #251B0E;
+        font-size: 1.125rem; }
+      .container .footer small {
+        font-family: "Urbanist-Regular";
+        color: #251B0E;
+        font-size: 0.875rem;
+        position: relative;
+        bottom: -9.375rem;
+        align-self: flex-end;
+        color: #FBF8F4; } }
