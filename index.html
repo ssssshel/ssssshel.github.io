@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         <div class="principal">
+            <a name="anchor0"></a>
             <div class="navbarVis">
                 <div class="navbarDesk">
 
@@ -30,11 +31,11 @@
             </div>
             <nav class="navHid">
                 <ul>
-                    <li><a href="#">inicio</a></li>
-                    <li><a href="#">sobre mí</a></li>
-                    <li><a href="#">habilidades</a></li>
-                    <li><a href="#">proyectos</a></li>
-                    <li><a href="#">contacto</a></li>
+                    <li><a href="#anchor0" onclick="closeNav()">inicio</a></li>
+                    <li><a href="#anchor1" onclick="closeNav()">sobre mí</a></li>
+                    <li><a href="#anchor2" onclick="closeNav()">habilidades</a></li>
+                    <li><a href="#anchor3" onclick="closeNav()">proyectos</a></li>
+                    <li><a href="#anchor4" onclick="closeNav()">contacto</a></li>
                 </ul>
             </nav>
             <div class="card">
@@ -44,7 +45,8 @@
             <img class="zep" src="layouts/img/zep2.svg" alt="zep">
             <div class="sqr"></div>
         </div>
-        <div class="aboutVis">
+        <div class="aboutVis" name= "about">
+            <a name="anchor1"></a>
             <span class="titleAboutVis">SOBRE MÍ</span>
             <p class="aboutVisDesc">
                 Hola!, soy desarrollador web, diseñador UX por hobbie, y un apasionado por la biología y los gatos.
@@ -79,6 +81,7 @@ En mis ratos libres disfruto de explorar nueva música en Spotify, leer un buen 
             </div>
         </div>
         <div class="skills">
+            <a name="anchor2"></a>
             <span class="skillsTitle">HABILIDADES</span>
             <div class="skillsGrid dis">
                 <div class="skItem1 hid">
@@ -175,6 +178,7 @@ En mis ratos libres disfruto de explorar nueva música en Spotify, leer un buen 
             </div>
         </div>
         <div class="projects">
+            <a name="anchor3"></a>
             <div class="portrait">
                 <span class="projectsTitle">PROYECTOS</span>
                 <img src="layouts/img/code-g32e764a34_1920.jpg" alt="code">
@@ -188,7 +192,24 @@ En mis ratos libres disfruto de explorar nueva música en Spotify, leer un buen 
                             <span class="projectName">PROYECTO 1</span>
                             
                             <span class="projectDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur quia rerum ad amet! </span>
-                            <input type="button" id="btnDetails" value="Ver más">
+                            <input type="button" id="btnDetails1" value="Ver más">
+                        </div>
+                        <div class="modalWrapper">
+                            <div class="modal">
+                                <div class="closeModal">
+                                    X
+                                </div>
+                                <div class="modalContent">
+                                    <div class="modalImgContainer">
+                                        <img src="/layouts/img/code-g32e764a34_1920.jpg" class="modalImg" alt="">
+                                    </div>
+                                    <div class="modalTextContainer">
+                                        <h2 class="modalTitle"></h2>
+                                        <p class="modalInfo">.</p>
+                                        <a class="projectLink" href="#" >Ver proyecto</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="project">
@@ -198,7 +219,7 @@ En mis ratos libres disfruto de explorar nueva música en Spotify, leer un buen 
                             <span class="projectDesc">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur quia rerum ad amet
                             </span>
-                            <input type="button" id="btnDetails" value="Ver más">
+                            <input type="button" id="btnDetails2" value="Ver más">
                         </div>
                     </div>
                     <div class="project">
@@ -206,7 +227,7 @@ En mis ratos libres disfruto de explorar nueva música en Spotify, leer un buen 
                         <div class="projectHover">
                             <span class="projectName">PROJECT 3</span>
                             <span class="projectDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur quia rerum ad amet</span>
-                            <input type="button" id="btnDetails" value="Ver más">
+                            <input type="button" id="btnDetails3" value="Ver más">
                         </div>
                     </div>
                     <div class="project">
@@ -214,7 +235,7 @@ En mis ratos libres disfruto de explorar nueva música en Spotify, leer un buen 
                         <div class="projectHover">
                             <span class="projectName">PROJECT 4</span>
                             <span class="projectDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur quia rerum ad amet</span>
-                            <input type="button" id="btnDetails" value="Ver más">
+                            <input type="button" id="btnDetails4" value="Ver más">
                         </div>
                     </div>
                     <div class="project">
@@ -222,27 +243,27 @@ En mis ratos libres disfruto de explorar nueva música en Spotify, leer un buen 
                         <div class="projectHover">
                             <span class="projectName">PROJECT 5</span>
                             <span class="projectDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur quia rerum ad amet</span>
-                            <input type="button" id="btnDetails" value="Ver más">
+                            <input type="button" id="btnDetails5" value="Ver más">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer">
+            <a name="anchor4"></a>
             <h1>¿Deseas <br>contactarme?</h1>
             <p class="contact">Puedes encontrarme en Linkedin, Github, StackOverflow, Twitter e Instagram</p>
             <div class="icons">
-                <i class="fab fa-linkedin"><a href="https://www.linkedin.com/in/angel-arteaga-egusquiza-5720a921a/"></a></i>
-                <i class="fab fa-github-square"><a href="https://github.com/ssssshel"></a></i>
-                <i class="fab fa-stack-overflow"><a href="https://es.stackoverflow.com/users/256796/angel-arteaga"></a></i>
-                <i class="fab fa-twitter-square"><a href="https://twitter.com/Aelsephine"></a></i>
-                <i class="fab fa-instagram-square"><a href="https://www.instagram.com/lmn_jcx/"></a></i>
+                <a href="https://www.linkedin.com/in/angel-arteaga-egusquiza-5720a921a/" target="_blanc"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ssssshel" target="_blanc"><i class="fab fa-github-square"></i></a>
+                <a href="https://es.stackoverflow.com/users/256796/angel-arteaga" target="_blanc"><i class="fab fa-stack-overflow"></i></a>
+                <a href="https://twitter.com/Aelsephine" target="_blanc"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/lmn_jcx/" target="_blanc"><i class="fab fa-instagram-square"></i></a>
             </div>
             <p class="otherOption">U optar por un correo a: angelarteaga989@gmail.com</p>
             <small>© 2021 ssssshel</small>
         </div>
     </div>
 </body>
-<script src="js/burgerNav.js"></script>
-<script src="js/skItemHid.js"></script>
+<script src="js/index.js"></script>
 </html>
