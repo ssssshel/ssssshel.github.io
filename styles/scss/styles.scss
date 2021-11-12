@@ -69,6 +69,10 @@
                     }
                 }
             }
+
+            .logo:hover {
+                background-color: #e5d3ba65;
+            }
         }
 
         /* NAV */
@@ -108,6 +112,10 @@
                         text-decoration: none;
                         @include fontSettings("Urbanist-Regular", $drk, 16);
                     }
+                }
+
+                a:hover {
+                    background-color: #85776446;
                 }
             }
         }
@@ -184,13 +192,17 @@
             line-height: toRem(30);
         }
 
-        .readMore {
+        .readMoreAbout {
             @include fontSettings("Comfortaa-Semibold", $drk, 16)
+        }
+
+        .readMoreAbout:hover {
+            text-decoration: underline;
         }
     }
 
     .aboutHid {
-        display: grid;
+        display: none;
         grid-template-columns: 100%;
         grid-template-rows: 50vh 65vh 50vh 60vh;
         width: 100%;
@@ -267,6 +279,14 @@
                 @include fontSettings("Urbanist-Regular", $lgt, 15);
                 line-height: toRem(30);
             }
+
+            .readLessAbout {
+                @include fontSettings("Comfortaa-Semibold", $lgt, 14)
+            }
+
+            .readLessAbout:hover {
+                text-decoration: underline;
+            }
         }
 
 
@@ -322,7 +342,10 @@
                     .iconBox {
                         display: flex;
                         flex-direction: column;
+                        justify-content: center;
                         align-items: center;
+                        width: toRem(90);
+                        height: toRem(120);
                         gap: toRem(20);
 
                         img {
@@ -332,6 +355,10 @@
                         .iconName {
                             @include fontSettings("Urbanist-Regular", $drk, 15)
                         }
+                    }
+
+                    .iconBox:hover {
+                        background-color: #e5d3ba83;
                     }
                 }
 
@@ -351,6 +378,10 @@
                 @include fontSettings("Comfortaa-SemiBold", $drk, 15);
                 border: none;
                 background-color: transparent;
+            }
+
+            #seeMore:hover {
+                text-decoration: underline;
             }
         }
 
@@ -408,7 +439,7 @@
 
                 .project:hover {
                     .projectImg {
-                        filter: brightness(1.0)
+                        filter: brightness(0.75)
                     }
 
                     .projectHover {
@@ -421,6 +452,7 @@
                     width: auto;
                     overflow-y: hidden;
                     display: flex;
+                    align-items: center;
                     flex-wrap: nowrap;
 
 
@@ -428,16 +460,15 @@
 
                         width: 100%;
                         height: auto;
-                        filter: brightness(0.6);
+                        filter: brightness(0.4);
                     }
-
 
                     .projectHover {
                         width: 50%;
                         height: 35vh;
+                        margin-left: toRem(30);
+                        margin-top: toRem(60);
                         position: absolute;
-                        // top: -18rem;
-                        // left: 2rem;
                         display: flex;
                         flex-direction: column;
                         gap: toRem(20);
@@ -487,10 +518,14 @@
                             background-color: $lgt;
 
                             .closeModal {
+                                width: toRem(30);
+                                height: toRem(35);
+                                padding-left: toRem(5);
                                 position: absolute;
-                                right: toRem(15);
-                                top: toRem(10);
-                                @include fontSettings("Urbanist-Regular", $lgt, 30)
+                                right: toRem(0);
+                                top: toRem(0);
+                                @include fontSettings("Urbanist-Regular", $drk, 30);
+                                background-color: rgba(255, 255, 255, 0.445)
                             }
 
                             .modalContent {
@@ -500,11 +535,10 @@
                                 // gap: toRem(20);
                                 display: grid;
                                 grid-template-columns: 100%;
-                                grid-template-rows: 50% 50%;
+                                grid-template-rows: 35% 65%;
 
                                 .modalImgContainer {
                                     width: 100%;
-                                    // height: 50%;
                                     overflow-y: hidden;
 
                                     .modalImg {
@@ -516,8 +550,8 @@
                                 .modalTextContainer {
                                     display: flex;
                                     flex-direction: column;
-                                    justify-content: center;
-                                    gap: toRem(20);
+                                    justify-content: space-evenly;
+                                    gap: toRem(10);
                                     padding-left: toRem(20);
 
                                     .modalTitle {
@@ -570,7 +604,7 @@
 
     .footer {
         width: 100%;
-        height: 95vh;
+        height: 100vh;
         padding-left: toRem(42);
         padding-right: toRem(42);
         display: flex;
@@ -583,11 +617,13 @@
 
         h1 {
             text-align: left;
+            line-height: toRem(40);
             @include fontSettings("Comfortaa-Regular", $drk, 30)
         }
 
         .contact {
             text-align: left;
+            line-height: toRem(30);
             @include fontSettings("Urbanist-Regular", $drk, 20)
         }
 
@@ -603,7 +639,12 @@
 
         .otherOption {
             text-align: left;
-            @include fontSettings("Urbanist-Regular", $drk, 18)
+            line-height: toRem(30);
+            @include fontSettings("Urbanist-Regular", $drk, 18);
+
+            span {
+                font-weight: bold;
+            }
         }
 
         small {

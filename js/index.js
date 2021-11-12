@@ -20,8 +20,24 @@ btnBurg.addEventListener('click', ()=>{
 
 function closeNav(){
     nav.classList.toggle('see');
+    bars.classList.toggle('hid');
 }
 
+// ITEM OCULTOS ABOUT
+
+const rmAbout = document.querySelector('.readMoreAbout');
+const rlAbout = document.querySelector('.readLessAbout');
+const aboutHid = document.querySelector('.aboutHid');
+
+rmAbout.addEventListener('click', () =>{
+    aboutHid.style.display = "grid";
+    rmAbout.style.display = "none";
+})
+
+rlAbout.addEventListener('click', () =>{
+    aboutHid.style.display = "none";
+    rmAbout.style.display = "block";
+})
 
 // ITEMS OCULTOS SKILLS
 
@@ -38,7 +54,6 @@ btnHid.addEventListener('click', () =>{
         item.classList.toggle('hid')
         grid.classList.toggle('dis')
     })
-    
 })
 
 
