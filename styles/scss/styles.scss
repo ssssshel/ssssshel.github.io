@@ -703,24 +703,37 @@
             }
 
             .card {
-                position: relative;
-                bottom: -60%;
-                left: toRem(-110);
-                max-width: toRem(250);
-                height: toRem(100);
+                bottom: toRem(70);
+                height: toRem(110);
+                margin-left: toRem(20);
 
                 .dev {
                     font-size: toRem(16);
                 }
             }
+
+            .principalImg {
+                position: relative;
+                top: toRem(100);
+
+                .zep {
+                    position: relative;
+                    width: toRem(300);
+                }
+
+                .bugcat {
+                    width: toRem(120);
+                    bottom: toRem(100);
+                    left: toRem(190);
+                }
+            }
         }
 
         .aboutVis {
-            justify-content: center;
-            gap: toRem(70);
+            height: 90vh;
+            gap: toRem(90);
             padding-left: toRem(80);
             padding-right: toRem(80);
-            padding-top: toRem(-200);
 
             .titleAboutVis {
                 font-size: toRem(33);
@@ -751,7 +764,7 @@
                 padding-right: toRem(80);
 
                 .aboutHidDesc2 {
-                    @include fontSettings("Urbanist-Regular", $lgt, 16);
+                    font-size: toRem(16);
                     line-height: toRem(35);
                 }
 
@@ -765,7 +778,7 @@
 
         .skills {
             gap: toRem(100);
-            padding-top: toRem(90);
+            padding-top: toRem(50);
             padding-bottom: toRem(120);
 
             .skillsTitle {
@@ -939,6 +952,278 @@
                 font-size: toRem(15);
             }
 
+        }
+    }
+
+
+    @include tablet-landscape {
+        .principal {
+
+            .navbarHid {
+                padding-left: toRem(80);
+                padding-right: toRem(80);
+
+                .logo {
+                    width: toRem(100);
+                    height: toRem(45);
+                }
+            }
+
+            .navHid {
+                padding-left: toRem(80);
+                padding-right: toRem(80);
+
+                ul {
+                    gap: toRem(35);
+                }
+            }
+
+            .card {
+                position: relative;
+                bottom: toRem(0);
+                left: 10%;
+                width: 25%;
+                height: 13%;
+                gap: toRem(10);
+
+                .dev {
+                    font-size: toRem(15);
+                }
+            }
+
+            .principalImg {
+                position: relative;
+                top: toRem(100);
+                width: toRem(200);
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+
+                .zep {
+                    width: toRem(180);
+                }
+
+                .bugcat {
+                    position: absolute;
+                    left: toRem(120);
+                    bottom: toRem(0);
+                    width: toRem(70);
+                }
+            }
+        }
+
+        .aboutVis {
+            position: relative;
+            width: 100%;
+            padding-left: toRem(80);
+            padding-right: toRem(80);
+            overflow-y: hidden;
+
+            .aboutVisDesc {
+                font-size: toRem(16);
+                line-height: toRem(35);
+                overflow-y: hidden;
+            }
+        }
+
+        .aboutHid {
+            display: none;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100vh 100vh;
+            width: 100%;
+            margin-top: toRem(80);
+
+            .aboutHidItem2 {
+                padding-left: toRem(80);
+                padding-right: toRem(80);
+                justify-content: center;
+                gap: toRem(70);
+
+                .aboutHidDesc1 {
+                    font-size: toRem(16);
+                    line-height: toRem(35);
+                }
+            }
+
+            .aboutHidItem3 {
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+
+            .aboutHidItem4 {
+                padding-left: toRem(80);
+                padding-right: toRem(80);
+                gap: toRem(70);
+                grid-column: 1/2;
+
+                .aboutHidDesc2 {
+                    font-size: toRem(16);
+                    line-height: toRem(35);
+                }
+
+                .readLessAbout {
+                    font-size: 16;
+                }
+            }
+
+
+        }
+
+        .skills {
+            gap: toRem(60);
+            padding-top: toRem(90);
+            padding-bottom: toRem(90);
+
+            .skillsTitle {
+                margin-left: toRem(80);
+            }
+
+            .skillsGrid {
+                gap: toRem(80);
+
+                .titleSkItem {
+                    font-size: toRem(22);
+                }
+
+                .skItem1,
+                .skItem2,
+                .skItem3,
+                .skItem4,
+                .skItem5 {
+                    padding-right: toRem(80);
+                    padding-left: toRem(80);
+                    gap: toRem(80);
+
+                    .iconItemBox {
+                        gap: toRem(50);
+
+                        .iconBox {
+                            width: toRem(110);
+                            height: toRem(140);
+                            gap: toRem(30);
+
+                            img {
+                                width: toRem(50);
+                            }
+
+                            .iconName {
+                                font-size: toRem(16);
+                            }
+                        }
+                    }
+                }
+
+                #seeMore {
+                    font-size: toRem(16);
+                }
+            }
+        }
+
+        .projects {
+            width: 100%;
+            height: auto;
+            background-color: $lgt;
+            display: flex;
+            flex-direction: column;
+
+            .portrait {
+                width: 100vw;
+                overflow-y: hidden;
+                text-align: center;
+
+                .projectsTitle {
+                    position: absolute;
+                    transform: translate(20%, 900%);
+                }
+
+                img {
+                    width: 110%;
+                }
+            }
+
+            .containerProjects {
+                .projectsGrid {
+                    padding-top: toRem(60);
+                    padding-left: toRem(80);
+                    padding-right: toRem(80);
+                    ;
+
+                    .project {
+                        height: 50vh;
+                        width: auto;
+                        overflow-y: hidden;
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: nowrap;
+
+
+                        .projectImg {
+
+                            width: 100%;
+                            height: auto;
+                            filter: brightness(0.4);
+                        }
+
+                        .projectHover {
+                            margin-left: toRem(40);
+                            margin-top: toRem(80);
+
+                            .projectName {
+                                font-size: toRem(22);
+                            }
+
+                            .projectDesc {
+                                line-height: toRem(35);
+                            }
+                        }
+
+                        .modalWrapper {
+
+                            .modal {
+                                width: 28%;
+                                height: 70vh;
+
+                                .modalContent {
+                                    grid-template-rows: 40% 60%;
+
+                                    .modalTextContainer {
+                                        padding-left: toRem(20);
+
+                                        .modalTitle {
+                                            font-size: toRem(22);
+                                        }
+
+                                        .projectLink {
+                                            font-size: toRem(15);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer {
+            padding-left: toRem(80);
+            padding-right: toRem(80);
+            padding-top: toRem(60);
+            overflow-y: hidden;
+
+            .icons {
+                gap: toRem(30);
+
+                i {
+                    font-size: toRem(26);
+                }
+            }
+
+            small {
+                bottom: toRem(-10);
+            }
         }
     }
 }

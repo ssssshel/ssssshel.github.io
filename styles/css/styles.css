@@ -576,19 +576,26 @@
           .container .principal .navHid ul li a {
             font-size: 1.0625rem; }
       .container .principal .card {
-        position: relative;
-        bottom: -60%;
-        left: -6.875rem;
-        max-width: 15.625rem;
-        height: 6.25rem; }
+        bottom: 4.375rem;
+        height: 6.875rem;
+        margin-left: 1.25rem; }
         .container .principal .card .dev {
           font-size: 1rem; }
+      .container .principal .principalImg {
+        position: relative;
+        top: 6.25rem; }
+        .container .principal .principalImg .zep {
+          position: relative;
+          width: 18.75rem; }
+        .container .principal .principalImg .bugcat {
+          width: 7.5rem;
+          bottom: 6.25rem;
+          left: 11.875rem; }
     .container .aboutVis {
-      justify-content: center;
-      gap: 4.375rem;
+      height: 90vh;
+      gap: 5.625rem;
       padding-left: 5rem;
-      padding-right: 5rem;
-      padding-top: -12.5rem; }
+      padding-right: 5rem; }
       .container .aboutVis .titleAboutVis {
         font-size: 2.0625rem; }
       .container .aboutVis .aboutVisDesc {
@@ -610,15 +617,13 @@
         padding-left: 5rem;
         padding-right: 5rem; }
         .container .aboutHid .aboutHidItem4 .aboutHidDesc2 {
-          font-family: "Urbanist-Regular";
-          color: #E9E9ED;
           font-size: 1rem;
           line-height: 2.1875rem; }
         .container .aboutHid .aboutHidItem4 .readLessAbout {
           font-size: 1rem; }
     .container .skills {
       gap: 6.25rem;
-      padding-top: 5.625rem;
+      padding-top: 3.125rem;
       padding-bottom: 7.5rem; }
       .container .skills .skillsTitle {
         margin-left: 5rem;
@@ -730,3 +735,182 @@
         font-size: 1.25rem; }
       .container .footer small {
         font-size: 0.9375rem; } }
+  @media (min-width: 56.25rem) {
+    .container .principal .navbarHid {
+      padding-left: 5rem;
+      padding-right: 5rem; }
+      .container .principal .navbarHid .logo {
+        width: 6.25rem;
+        height: 2.8125rem; }
+    .container .principal .navHid {
+      padding-left: 5rem;
+      padding-right: 5rem; }
+      .container .principal .navHid ul {
+        gap: 2.1875rem; }
+    .container .principal .card {
+      position: relative;
+      bottom: 0rem;
+      left: 10%;
+      width: 25%;
+      height: 13%;
+      gap: 0.625rem; }
+      .container .principal .card .dev {
+        font-size: 0.9375rem; }
+    .container .principal .principalImg {
+      position: relative;
+      top: 6.25rem;
+      width: 12.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap; }
+      .container .principal .principalImg .zep {
+        width: 11.25rem; }
+      .container .principal .principalImg .bugcat {
+        position: absolute;
+        left: 7.5rem;
+        bottom: 0rem;
+        width: 4.375rem; }
+    .container .aboutVis {
+      position: relative;
+      width: 100%;
+      padding-left: 5rem;
+      padding-right: 5rem;
+      overflow-y: hidden; }
+      .container .aboutVis .aboutVisDesc {
+        font-size: 1rem;
+        line-height: 2.1875rem;
+        overflow-y: hidden; }
+    .container .aboutHid {
+      display: none;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 100vh 100vh;
+      width: 100%;
+      margin-top: 5rem; }
+      .container .aboutHid .aboutHidItem2 {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        justify-content: center;
+        gap: 4.375rem; }
+        .container .aboutHid .aboutHidItem2 .aboutHidDesc1 {
+          font-size: 1rem;
+          line-height: 2.1875rem; }
+      .container .aboutHid .aboutHidItem3 {
+        grid-column: 2/3;
+        grid-row: 2/3; }
+      .container .aboutHid .aboutHidItem4 {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        gap: 4.375rem;
+        grid-column: 1/2; }
+        .container .aboutHid .aboutHidItem4 .aboutHidDesc2 {
+          font-size: 1rem;
+          line-height: 2.1875rem; }
+        .container .aboutHid .aboutHidItem4 .readLessAbout {
+          font-size: 16; }
+    .container .skills {
+      gap: 3.75rem;
+      padding-top: 5.625rem;
+      padding-bottom: 5.625rem; }
+      .container .skills .skillsTitle {
+        margin-left: 5rem; }
+      .container .skills .skillsGrid {
+        gap: 5rem; }
+        .container .skills .skillsGrid .titleSkItem {
+          font-size: 1.375rem; }
+        .container .skills .skillsGrid .skItem1,
+        .container .skills .skillsGrid .skItem2,
+        .container .skills .skillsGrid .skItem3,
+        .container .skills .skillsGrid .skItem4,
+        .container .skills .skillsGrid .skItem5 {
+          padding-right: 5rem;
+          padding-left: 5rem;
+          gap: 5rem; }
+          .container .skills .skillsGrid .skItem1 .iconItemBox,
+          .container .skills .skillsGrid .skItem2 .iconItemBox,
+          .container .skills .skillsGrid .skItem3 .iconItemBox,
+          .container .skills .skillsGrid .skItem4 .iconItemBox,
+          .container .skills .skillsGrid .skItem5 .iconItemBox {
+            gap: 3.125rem; }
+            .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox,
+            .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox,
+            .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox,
+            .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox,
+            .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox {
+              width: 6.875rem;
+              height: 8.75rem;
+              gap: 1.875rem; }
+              .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox img,
+              .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox img,
+              .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox img,
+              .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox img,
+              .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox img {
+                width: 3.125rem; }
+              .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox .iconName,
+              .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox .iconName,
+              .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox .iconName,
+              .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox .iconName,
+              .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox .iconName {
+                font-size: 1rem; }
+        .container .skills .skillsGrid #seeMore {
+          font-size: 1rem; }
+    .container .projects {
+      width: 100%;
+      height: auto;
+      background-color: #E9E9ED;
+      display: flex;
+      flex-direction: column; }
+      .container .projects .portrait {
+        width: 100vw;
+        overflow-y: hidden;
+        text-align: center; }
+        .container .projects .portrait .projectsTitle {
+          position: absolute;
+          transform: translate(20%, 900%); }
+        .container .projects .portrait img {
+          width: 110%; }
+      .container .projects .containerProjects .projectsGrid {
+        padding-top: 3.75rem;
+        padding-left: 5rem;
+        padding-right: 5rem; }
+        .container .projects .containerProjects .projectsGrid .project {
+          height: 50vh;
+          width: auto;
+          overflow-y: hidden;
+          display: flex;
+          align-items: center;
+          flex-wrap: nowrap; }
+          .container .projects .containerProjects .projectsGrid .project .projectImg {
+            width: 100%;
+            height: auto;
+            filter: brightness(0.4); }
+          .container .projects .containerProjects .projectsGrid .project .projectHover {
+            margin-left: 2.5rem;
+            margin-top: 5rem; }
+            .container .projects .containerProjects .projectsGrid .project .projectHover .projectName {
+              font-size: 1.375rem; }
+            .container .projects .containerProjects .projectsGrid .project .projectHover .projectDesc {
+              line-height: 2.1875rem; }
+          .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal {
+            width: 28%;
+            height: 70vh; }
+            .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent {
+              grid-template-rows: 40% 60%; }
+              .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer {
+                padding-left: 1.25rem; }
+                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .modalTitle {
+                  font-size: 1.375rem; }
+                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .projectLink {
+                  font-size: 0.9375rem; }
+    .container .footer {
+      padding-left: 5rem;
+      padding-right: 5rem;
+      padding-top: 3.75rem;
+      overflow-y: hidden; }
+      .container .footer .icons {
+        gap: 1.875rem; }
+        .container .footer .icons i {
+          font-size: 1.625rem; }
+      .container .footer small {
+        bottom: -0.625rem; } }
