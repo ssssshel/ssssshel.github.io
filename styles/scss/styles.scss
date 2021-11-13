@@ -25,7 +25,6 @@
         overflow-y: hidden;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-between;
         background-color: $bas;
         z-index: 1;
@@ -35,7 +34,6 @@
         }
 
         .navbarHid {
-            // height: 8%;
             height: toRem(70);
             width: 100%;
             box-sizing: border-box;
@@ -48,9 +46,9 @@
             flex-wrap: nowrap;
             align-items: center;
             justify-content: space-between;
-            background-color: #e5d3ba65;
-            filter: brightness(1.15);
-            backdrop-filter: blur(toRem(20));
+            background-color: #e9e9ed65;
+            filter: brightness(0.8);
+            backdrop-filter: blur(toRem(5));
             @import "partials/navbarBurg";
 
             .logo {
@@ -71,11 +69,9 @@
             }
 
             .logo:hover {
-                background-color: #e5d3ba65;
+                background-color: #17171c33;
             }
         }
-
-        /* NAV */
 
         .navHid {
             position: fixed;
@@ -87,14 +83,13 @@
             height: 110%;
             padding-left: toRem(42);
             padding-right: toRem(42);
-            // max-height: 90vh;
             z-index: 3;
             overflow-y: hidden;
             display: flex;
             flex-direction: column;
-            background-color: #e5d3ba65;
-            backdrop-filter: blur(toRem(20));
-            filter: brightness(1.1);
+            background-color: #e9e9ed65;
+            filter: brightness(0.8);
+            backdrop-filter: blur(toRem(5));
 
             ul {
                 position: relative;
@@ -127,13 +122,9 @@
 
         .card {
             position: relative;
-            // bottom: toRem(-500);
-            bottom: -65%;
-            left: toRem(-90);
-            // width: toRem(207);
+            left: toRem(40);
             width: 40%;
             height: toRem(100);
-            // height: 15%;
             z-index: 2;
             display: flex;
             flex-direction: column;
@@ -150,31 +141,37 @@
             }
         }
 
-        .zep {
+        .principalImg {
             position: relative;
-            left: toRem(10);
-            bottom: toRem(50);
-            // width: toRem(300);
-            //width: 62%;
-            height: 70%;
+            top: toRem(100);
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+
+            .zep {
+                position: relative;
+                width: toRem(200);
+            }
+
+            .bugcat {
+                position: relative;
+                width: toRem(80);
+                bottom: toRem(60);
+                left: toRem(130);
+            }
+
         }
 
         .sqr {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 15%;
-            background-color: #e5d3ba65;
-            backdrop-filter: blur(toRem(20));
-            filter: brightness(1.1);
-            z-index: 2;
+            height: 1px;
         }
     }
 
     .aboutVis {
         position: relative;
         width: 100%;
-        height: 100vh;
+        height: 120vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -272,16 +269,16 @@
             background-color: $c2;
 
             .aboutHidTitle2 {
-                @include fontSettings("Comfortaa-Regular", $lgt, 30)
+                @include fontSettings("Comfortaa-Regular", $drk, 30)
             }
 
             .aboutHidDesc2 {
-                @include fontSettings("Urbanist-Regular", $lgt, 15);
+                @include fontSettings("Urbanist-Regular", $drk, 15);
                 line-height: toRem(30);
             }
 
             .readLessAbout {
-                @include fontSettings("Comfortaa-Semibold", $lgt, 14)
+                @include fontSettings("Comfortaa-Semibold", $drk, 14)
             }
 
             .readLessAbout:hover {
@@ -358,7 +355,7 @@
                     }
 
                     .iconBox:hover {
-                        background-color: #e5d3ba83;
+                        background-color: #17171c33;
                     }
                 }
 
@@ -488,7 +485,7 @@
                         input {
                             width: 25vw;
                             height: 12%;
-                            background-color: rgba(245, 222, 179, 0.363);
+                            background-color: #17171c86;
                             backdrop-filter: blur(10);
                             border: none;
                             @include fontSettings("Urbanist-Regular", $lgt, 15);
@@ -524,6 +521,7 @@
                                 position: absolute;
                                 right: toRem(0);
                                 top: toRem(0);
+                                overflow-y: hidden;
                                 @include fontSettings("Urbanist-Regular", $drk, 30);
                                 background-color: rgba(255, 255, 255, 0.445)
                             }
@@ -609,22 +607,20 @@
         padding-right: toRem(42);
         display: flex;
         justify-content: center;
-        // align-items: center;
         gap: toRem(30);
         flex-direction: column;
-        background-color: #AB9D8A;
-        background: linear-gradient(180deg, #AB9D8A, #AB9D8A, #AB9D8A, #AB9D8A, #AB9D8A, $drk);
+        background-color: $drk;
 
         h1 {
             text-align: left;
             line-height: toRem(40);
-            @include fontSettings("Comfortaa-Regular", $drk, 30)
+            @include fontSettings("Comfortaa-Regular", $lgt, 30)
         }
 
         .contact {
             text-align: left;
             line-height: toRem(30);
-            @include fontSettings("Urbanist-Regular", $drk, 20)
+            @include fontSettings("Urbanist-Regular", $lgt, 20)
         }
 
         .icons {
@@ -633,14 +629,14 @@
 
             i {
                 font-size: toRem(24);
-                color: $drk;
+                color: $lgt;
             }
         }
 
         .otherOption {
             text-align: left;
             line-height: toRem(30);
-            @include fontSettings("Urbanist-Regular", $drk, 18);
+            @include fontSettings("Urbanist-Regular", $lgt, 18);
 
             span {
                 font-weight: bold;
@@ -658,516 +654,291 @@
 
     }
 
-    // @include tablet-portrait {
-    //     .principal {
-    //         position: relative;
-    //         width: 100%;
-    //         height: 100vh;
-    //         overflow-y: hidden;
-    //         display: flex;
-    //         flex-direction: column;
-    //         align-items: center;
-    //         justify-content: space-between;
-    //         background-color: $bas;
-    //         z-index: 1;
-
-    //         .navbarVis {
-    //             display: none;
-    //         }
-
-    //         .navbarHid {
-    //             // height: 8%;
-    //             height: toRem(70);
-    //             width: 100%;
-    //             box-sizing: border-box;
-    //             position: fixed;
-    //             padding-left: toRem(42);
-    //             padding-right: toRem(42);
-    //             z-index: 4;
-    //             display: flex;
-    //             flex-direction: row;
-    //             flex-wrap: nowrap;
-    //             align-items: center;
-    //             justify-content: space-between;
-    //             background-color: #e5d3ba65;
-    //             filter: brightness(1.15);
-    //             backdrop-filter: blur(toRem(20));
-    //             @import "partials/navbarBurg";
-
-    //             .logo {
-    //                 box-sizing: border-box;
-    //                 width: toRem(92);
-    //                 height: toRem(40);
-    //                 position: relative;
-    //                 background-color: transparent;
-    //                 border: $drk toRem(2) solid;
-    //                 text-decoration: none;
-    //                 text-align: right;
-
-    //                 .contentLogo {
-    //                     span {
-    //                         @include fontSettings("Comfortaa-Light", $drk, 30);
-    //                     }
-    //                 }
-    //             }
-    //         }
-
-    //         /* NAV */
-
-    //         .navHid {
-    //             position: fixed;
-    //             top: 0;
-
-    //             bottom: 0;
-    //             left: -100%;
-    //             width: 100%;
-    //             height: 110%;
-    //             padding-left: toRem(42);
-    //             padding-right: toRem(42);
-    //             // max-height: 90vh;
-    //             z-index: 3;
-    //             overflow-y: hidden;
-    //             display: flex;
-    //             flex-direction: column;
-    //             background-color: #e5d3ba65;
-    //             backdrop-filter: blur(toRem(20));
-    //             filter: brightness(1.1);
-
-    //             ul {
-    //                 position: relative;
-    //                 top: toRem(100);
-    //                 display: flex;
-    //                 flex-direction: column;
-    //                 gap: toRem(30);
-    //                 z-index: 3;
-
-    //                 li {
-    //                     padding-bottom: toRem(10);
-    //                     border-bottom: toRem(1) solid $drk;
-
-    //                     a {
-    //                         text-decoration: none;
-    //                         @include fontSettings("Urbanist-Regular", $drk, 16);
-    //                     }
-    //                 }
-    //             }
-    //         }
-
-
-    //         .navHid.see {
-    //             left: 0;
-    //         }
-
-    //         .card {
-    //             position: relative;
-    //             // bottom: toRem(-500);
-    //             bottom: -65%;
-    //             left: toRem(-90);
-    //             // width: toRem(207);
-    //             width: 40%;
-    //             height: toRem(100);
-    //             // height: 15%;
-    //             z-index: 2;
-    //             display: flex;
-    //             flex-direction: column;
-    //             justify-content: center;
-    //             padding-left: toRem(10);
-    //             background-color: $drk;
-
-    //             .name {
-    //                 @include fontSettings("Comfortaa-Light", $lgt, 24);
-    //             }
-
-    //             .dev {
-    //                 @include fontSettings("Urbanist-Regular", $lgt, 14)
-    //             }
-    //         }
-
-    //         .zep {
-    //             position: relative;
-    //             left: toRem(10);
-    //             bottom: toRem(50);
-    //             // width: toRem(300);
-    //             //width: 62%;
-    //             height: 70%;
-    //         }
-
-    //         .sqr {
-    //             position: absolute;
-    //             bottom: 0;
-    //             width: 100%;
-    //             height: 15%;
-    //             background-color: #e5d3ba65;
-    //             backdrop-filter: blur(toRem(20));
-    //             filter: brightness(1.1);
-    //             z-index: 2;
-    //         }
-    //     }
-
-    //     .aboutVis {
-    //         position: relative;
-    //         width: 100%;
-    //         height: 100vh;
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: space-around;
-    //         padding-left: toRem(42);
-    //         padding-right: toRem(42);
-    //         z-index: 0;
-    //         background-color: $lgt;
-
-    //         .titleAboutVis {
-    //             @include fontSettings("Comfortaa-Regular", $drk, 30);
-    //         }
-
-    //         .aboutVisDesc {
-    //             @include fontSettings("Urbanist-Regular", $drk, 15);
-    //             line-height: toRem(30);
-    //         }
-
-    //         .readMore {
-    //             @include fontSettings("Comfortaa-Semibold", $drk, 16)
-    //         }
-    //     }
-
-    //     .aboutHid {
-    //         display: grid;
-    //         grid-template-columns: 100%;
-    //         grid-template-rows: 50vh 65vh 50vh 60vh;
-    //         width: 100%;
-
-    //         .aboutHidItem1 {
-    //             overflow-y: hidden;
-
-    //             img {
-    //                 width: 100%;
-    //                 height: auto;
-    //             }
-    //         }
-
-    //         @supports(object-fit:cover) {
-    //             .aboutHidItem1 {
-    //                 img {
-    //                     height: 100%;
-    //                     object-fit: cover;
-    //                     object-position: center center;
-    //                 }
-    //             }
-    //         }
-
-    //         .aboutHidItem2 {
-    //             display: flex;
-    //             flex-direction: column;
-    //             justify-content: space-evenly;
-    //             padding-left: toRem(42);
-    //             padding-right: toRem(72);
-    //             background-color: $drk;
-
-    //             .aboutHidTitle1 {
-    //                 @include fontSettings("Comfortaa-Regular", $lgt, 30)
-    //             }
-
-    //             .aboutHidDesc1 {
-    //                 @include fontSettings("Urbanist-Regular", $lgt, 14);
-    //                 line-height: toRem(30);
-    //             }
-    //         }
-
-    //         .aboutHidItem3 {
-    //             overflow-y: hidden;
-
-    //             img {
-    //                 width: 100%;
-    //                 height: auto;
-    //             }
-    //         }
-
-    //         @supports(object-fit: cover) {
-    //             .aboutHidItem3 {
-    //                 img {
-    //                     height: 100%;
-    //                     object-fit: cover;
-    //                     object-position: center center;
-    //                 }
-    //             }
-    //         }
-
-    //         .aboutHidItem4 {
-    //             display: flex;
-    //             flex-direction: column;
-    //             justify-content: space-evenly;
-    //             padding-left: toRem(42);
-    //             padding-right: toRem(72);
-    //             background-color: $c2;
-
-    //             .aboutHidTitle2 {
-    //                 @include fontSettings("Comfortaa-Regular", $lgt, 30)
-    //             }
-
-    //             .aboutHidDesc2 {
-    //                 @include fontSettings("Urbanist-Regular", $lgt, 15);
-    //                 line-height: toRem(30);
-    //             }
-    //         }
-
-
-    //     }
-
-    //     .skills {
-    //         height: auto;
-    //         width: 100%;
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: space-evenly;
-    //         gap: toRem(60);
-    //         padding-top: toRem(90);
-    //         padding-bottom: toRem(90);
-    //         background-color: $lgt;
-
-    //         .skillsTitle {
-    //             margin-left: toRem(42);
-    //             @include fontSettings("Comfortaa-Regular", $drk, 30);
-    //         }
-
-    //         .skillsGrid {
-    //             display: grid;
-    //             grid-template-columns: 100%;
-    //             grid-template-rows: auto auto auto auto auto;
-    //             gap: toRem(80);
-
-    //             .titleSkItem {
-    //                 @include fontSettings("Comfortaa-Regular", $drk, 20);
-
-    //             }
-
-    //             .skItem1,
-    //             .skItem2,
-    //             .skItem3,
-    //             .skItem4,
-    //             .skItem5 {
-    //                 padding-right: toRem(42);
-    //                 padding-left: toRem(42);
-    //                 display: flex;
-    //                 flex-direction: column;
-    //                 gap: toRem(60);
-    //                 justify-content: space-around;
-    //                 overflow-y: hidden;
-
-    //                 .iconItemBox {
-    //                     display: flex;
-    //                     flex-direction: row;
-    //                     flex-wrap: wrap;
-    //                     justify-content: space-evenly;
-    //                     gap: toRem(30);
-
-    //                     .iconBox {
-    //                         display: flex;
-    //                         flex-direction: column;
-    //                         align-items: center;
-    //                         gap: toRem(20);
-
-    //                         img {
-    //                             width: toRem(50);
-    //                         }
-
-    //                         .iconName {
-    //                             @include fontSettings("Urbanist-Regular", $drk, 15)
-    //                         }
-    //                     }
-    //                 }
-
-    //             }
-
-    //             .skItem2.hid,
-    //             .skItem3.hid,
-    //             .skItem4.hid,
-    //             .skItem5.hid {
-    //                 display: none;
-    //             }
-
-    //             #seeMore {
-    //                 height: toRem(30);
-    //                 width: toRem(70);
-    //                 text-align: left;
-    //                 @include fontSettings("Comfortaa-SemiBold", $drk, 15);
-    //                 border: none;
-    //                 background-color: transparent;
-    //             }
-    //         }
-
-    //         .skillsGrid.dis {
-    //             display: grid;
-    //             grid-template-columns: 100%;
-    //             grid-template-rows: auto;
-    //             gap: toRem(80);
-    //         }
-    //     }
-
-    //     .projects {
-    //         width: 100%;
-    //         height: auto;
-    //         background-color: $lgt;
-    //         display: flex;
-    //         flex-direction: column;
-
-    //         .portrait {
-    //             height: 100vh;
-    //             overflow-y: hidden;
-    //             display: inline-block;
-    //             text-align: center;
-
-    //             .projectsTitle {
-    //                 position: absolute;
-    //                 transform: translate(20%, 1100%);
-
-    //                 @include fontSettings("Comfortaa-SemiBold", $lgt, 30)
-    //             }
-    //         }
-
-    //         @supports (object-fit:cover) {
-    //             .portrait {
-    //                 img {
-    //                     height: 100%;
-    //                     object-fit: cover;
-    //                     object-position:
-    //                         center center;
-    //                 }
-    //             }
-    //         }
-
-    //         .containerProjects {
-    //             .projectsGrid {
-    //                 display: grid;
-    //                 grid-template-columns: 100%;
-    //                 grid-template-rows: auto auto auto auto auto;
-    //                 row-gap: 1%;
-    //                 padding-top: toRem(40);
-    //                 padding-bottom: toRem(120);
-    //                 padding-left: toRem(42);
-    //                 padding-right: toRem(42);
-    //                 overflow-y: hidden;
-
-    //                 .project:hover {
-    //                     .projectImg {
-    //                         filter: brightness(1.0)
-    //                     }
-
-    //                     .projectHover {
-    //                         opacity: 1;
-    //                     }
-    //                 }
-
-    //                 .project {
-    //                     height: 50vh;
-    //                     width: auto;
-    //                     overflow-y: hidden;
-
-
-    //                     .projectImg {
-    //                         width: 100%;
-    //                         height: auto;
-    //                         filter: brightness(0.6);
-    //                     }
-
-
-    //                     .projectHover {
-    //                         width: 50%;
-    //                         height: 35vh;
-    //                         position: relative;
-    //                         top: -18rem;
-    //                         left: 2rem;
-    //                         display: flex;
-    //                         flex-direction: column;
-    //                         gap: toRem(20);
-    //                         overflow-y: hidden;
-    //                         opacity: 0;
-
-    //                         .projectName {
-    //                             @include fontSettings("Comfortaa-Regular", $lgt, 20)
-    //                         }
-
-    //                         .projectDesc {
-    //                             overflow-y: hidden;
-    //                             line-height: toRem(30);
-    //                             @include fontSettings("Urbanist-Regular", $lgt, 15)
-    //                         }
-
-    //                         input {
-    //                             width: 25vw;
-    //                             height: 12%;
-    //                             background-color: rgba(245, 222, 179, 0.363);
-    //                             backdrop-filter: blur(10);
-    //                             border: none;
-    //                             @include fontSettings("Urbanist-Regular", $lgt, 15);
-    //                             text-align: left;
-    //                             padding-left: toRem(5);
-    //                         }
-    //                     }
-    //                 }
-
-    //                 @supports (object-fit:cover) {
-    //                     .project {
-    //                         .projectImg {
-    //                             height: 100%;
-    //                             object-fit: cover;
-    //                             object-position:
-    //                                 center center;
-    //                         }
-    //                     }
-    //                 }
-
-    //             }
-    //         }
-    //     }
-
-    //     .footer {
-    //         width: 100%;
-    //         height: 95vh;
-    //         padding-left: toRem(42);
-    //         padding-right: toRem(42);
-    //         display: flex;
-    //         justify-content: center;
-    //         // align-items: center;
-    //         gap: toRem(30);
-    //         flex-direction: column;
-    //         background-color: #AB9D8A;
-    //         background: linear-gradient(180deg, #AB9D8A, #AB9D8A, #AB9D8A, #AB9D8A, #AB9D8A, $drk);
-
-    //         h1 {
-    //             text-align: left;
-    //             @include fontSettings("Comfortaa-Regular", $drk, 30)
-    //         }
-
-    //         .contact {
-    //             text-align: left;
-    //             @include fontSettings("Urbanist-Regular", $drk, 20)
-    //         }
-
-    //         .icons {
-    //             display: flex;
-    //             gap: toRem(20);
-
-    //             i {
-    //                 font-size: toRem(24);
-    //                 color: $drk;
-    //             }
-    //         }
-
-    //         .otherOption {
-    //             text-align: left;
-    //             @include fontSettings("Urbanist-Regular", $drk, 18)
-    //         }
-
-    //         small {
-    //             @include fontSettings("Urbanist-Regular", $drk, 14);
-    //             position: relative;
-    //             bottom: toRem(-150);
-    //             align-self: flex-end;
-    //             color: $lgt;
-
-    //         }
-
-    //     }
-
-    // }
+
+
+    @include tablet-portrait {
+        .principal {
+            display: flex;
+
+            .navbarHid {
+                height: toRem(80);
+                padding-left: toRem(80);
+                padding-right: toRem(80);
+                z-index: 4;
+
+                .logo {
+                    box-sizing: border-box;
+                    width: toRem(100);
+                    height: toRem(45);
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .contentLogo {
+                        span {
+                            @include fontSettings("Comfortaa-Light", $drk, 32);
+                        }
+                    }
+                }
+            }
+
+            /* NAV */
+
+            .navHid {
+                padding-left: toRem(80);
+                padding-right: toRem(80);
+                // max-height: 90vh;
+                z-index: 3;
+                top: toRem(30);
+
+                ul {
+                    gap: toRem(50);
+
+                    li {
+                        a {
+                            font-size: toRem(17);
+                        }
+                    }
+                }
+            }
+
+            .card {
+                position: relative;
+                bottom: -60%;
+                left: toRem(-110);
+                max-width: toRem(250);
+                height: toRem(100);
+
+                .dev {
+                    font-size: toRem(16);
+                }
+            }
+        }
+
+        .aboutVis {
+            justify-content: center;
+            gap: toRem(70);
+            padding-left: toRem(80);
+            padding-right: toRem(80);
+            padding-top: toRem(-200);
+
+            .titleAboutVis {
+                font-size: toRem(33);
+            }
+
+            .aboutVisDesc {
+                @include fontSettings("Urbanist-Regular", $drk, 16);
+                line-height: toRem(45);
+            }
+
+        }
+
+        .aboutHid {
+            grid-template-rows: 50vh 50vh 50vh 50vh;
+
+            .aboutHidItem2 {
+                padding-left: toRem(80);
+                padding-right: toRem(80);
+
+                .aboutHidDesc1 {
+                    @include fontSettings("Urbanist-Regular", $lgt, 16);
+                    line-height: toRem(35);
+                }
+            }
+
+            .aboutHidItem4 {
+                padding-left: toRem(80);
+                padding-right: toRem(80);
+
+                .aboutHidDesc2 {
+                    @include fontSettings("Urbanist-Regular", $lgt, 16);
+                    line-height: toRem(35);
+                }
+
+                .readLessAbout {
+                    font-size: toRem(16);
+                }
+            }
+
+
+        }
+
+        .skills {
+            gap: toRem(100);
+            padding-top: toRem(90);
+            padding-bottom: toRem(120);
+
+            .skillsTitle {
+                margin-left: toRem(80);
+                font-size: toRem(33);
+            }
+
+            .skillsGrid {
+
+                .titleSkItem {
+                    font-size: toRem(24);
+                }
+
+                .skItem1,
+                .skItem2,
+                .skItem3,
+                .skItem4,
+                .skItem5 {
+                    padding-right: toRem(80);
+                    padding-left: toRem(80);
+                    gap: toRem(100);
+                    margin-top: toRem(40);
+
+                    .iconItemBox {
+                        gap: toRem(50);
+
+                        .iconBox {
+                            width: toRem(90);
+                            height: toRem(120);
+                            gap: toRem(30);
+
+                            img {
+                                width: toRem(60);
+                            }
+
+                            .iconName {
+                                font-size: toRem(16);
+                            }
+                        }
+                    }
+                }
+
+                #seeMore {
+                    font-size: toRem(16);
+                }
+            }
+        }
+
+        .projects {
+            display: flex;
+
+            .portrait {
+
+                .projectsTitle {
+                    transform: translate(37%, 1400%);
+                    font-size: toRem(33);
+                }
+            }
+
+            .containerProjects {
+                .projectsGrid {
+                    row-gap: 1%;
+                    padding-top: toRem(50);
+                    margin-bottom: toRem(50);
+                    padding-left: toRem(80);
+                    padding-right: toRem(80);
+
+                    .project {
+
+                        .projectHover {
+                            width: 60%;
+                            height: 35vh;
+                            margin-left: toRem(40);
+                            margin-top: toRem(190);
+
+                            .projectName {
+                                font-size: toRem(24);
+                            }
+
+                            .projectDesc {
+                                line-height: toRem(35);
+                                font-size: toRem(16);
+                            }
+
+                            input {
+                                width: 15vw;
+                                font-size: toRem(16);
+                            }
+                        }
+
+                        .modalWrapper {
+
+                            .modal {
+
+                                .closeModal {
+                                    width: toRem(30);
+                                    height: toRem(35);
+                                    padding-left: toRem(5);
+                                    position: absolute;
+                                    right: toRem(0);
+                                    top: toRem(0);
+                                    @include fontSettings("Urbanist-Regular", $drk, 30);
+                                    background-color: rgba(255, 255, 255, 0.445)
+                                }
+
+                                .modalContent {
+                                    grid-template-rows: 45% 55%;
+
+                                    .modalTextContainer {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-evenly;
+                                        gap: toRem(10);
+                                        padding-left: toRem(30);
+
+                                        .modalInfo {
+                                            font-size: toRem(16);
+                                            line-height: toRem(30)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+
+                    @supports (object-fit:cover) {
+                        .project {
+                            .projectImg {
+                                height: 100%;
+                                object-fit: cover;
+                                object-position:
+                                    center center;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .footer {
+            padding-left: toRem(80);
+            padding-right: toRem(80);
+            gap: toRem(50);
+
+            h1 {
+                font-size: toRem(33);
+            }
+
+            .contact {
+                line-height: toRem(35);
+            }
+
+            .icons {
+                gap: toRem(30);
+
+                i {
+
+                    font-size: toRem(28);
+                }
+            }
+
+            .otherOption {
+                line-height: toRem(35);
+                font-size: toRem(20);
+            }
+
+            small {
+                font-size: toRem(15);
+            }
+
+        }
+    }
 }
