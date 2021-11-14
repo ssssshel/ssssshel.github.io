@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Comfortaa-Regular";
+    src: url(/layouts/fonts/Comfortaa-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Comfortaa-Semibold";
+    src: url(/layouts/fonts/Comfortaa-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Comfortaa-Light";
+    src: url(/layouts/fonts/Comfortaa-Light.ttf);
+}
+
+@font-face {
+    font-family: "Urbanist-Regular";
+    src: url(/layouts/fonts/Urbanist-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Urbanist-Semibold";
+    src: url(/layouts/fonts/Urbanist-SemiBold.ttf);
+}
+
+
+@mixin fontSettings($nom, $col, $siz) {
+    font-family: $nom;
+    color: $col;
+    font-size: ($siz/16) + rem;
+}
