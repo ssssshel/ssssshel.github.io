@@ -166,6 +166,8 @@
         left: 8.125rem; }
     .container .principal .sqr {
       height: 1px; }
+  .container .navbarParallax {
+    display: none; }
   .container .aboutVis {
     position: relative;
     width: 100%;
