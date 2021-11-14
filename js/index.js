@@ -23,6 +23,23 @@ function closeNav(){
     bars.classList.toggle('hid');
 }
 
+
+//MENU PARALLAX
+let med = document.querySelector(".principal");
+const lim = med.clientHeight;
+const menuPar = document.querySelector(".navbarParallax");
+
+window.onscroll = function(p){
+    p = window.scrollY;
+    if(p > lim){
+        menuPar.style.display = "flex"
+    }else{
+        menuPar.style.display = "none"
+    }
+}
+
+
+
 // ITEM OCULTOS ABOUT
 
 const rmAbout = document.querySelector('.readMoreAbout');

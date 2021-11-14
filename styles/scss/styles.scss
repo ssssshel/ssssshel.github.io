@@ -51,7 +51,7 @@
             backdrop-filter: blur(toRem(5));
             @import "partials/navbarBurg";
 
-            .logo {
+            .logohid {
                 box-sizing: border-box;
                 width: toRem(92);
                 height: toRem(40);
@@ -666,7 +666,7 @@
                 padding-right: toRem(80);
                 z-index: 4;
 
-                .logo {
+                .logohid {
                     box-sizing: border-box;
                     width: toRem(100);
                     height: toRem(45);
@@ -955,7 +955,6 @@
         }
     }
 
-
     @include tablet-landscape {
         .principal {
 
@@ -1224,6 +1223,632 @@
             small {
                 bottom: toRem(-10);
             }
+        }
+    }
+
+    @include desktop {
+        .principal {
+
+            .navbarVis {
+
+                height: toRem(70);
+                width: toRem(650);
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: baseline;
+                gap: toRem(65);
+                padding-top: toRem(15);
+                margin-left: toRem(110);
+                border-bottom: $lgt toRem(2) solid;
+
+                .logoDesk {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: toRem(90);
+                    height: toRem(40);
+                    background-color: transparent;
+                    border: $drk toRem(2) solid;
+                    text-align: right;
+
+
+                    .logoDeskContent {
+                        text-decoration: none;
+                        @include fontSettings("Comfortaa-Regular", $drk, 30);
+                    }
+                }
+
+                .logoDesk:hover {
+                    background-color: $drk;
+                    border: $lgt toRem(2) solid;
+
+                    .logoDeskContent {
+                        color: $lgt;
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    gap: toRem(55);
+
+                    li {
+                        a {
+                            text-decoration: none;
+                            @include fontSettings("Urbanist-Regular", $drk, 18)
+                        }
+
+                        a:hover {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .navbarHid {
+                display: none;
+            }
+
+
+            .card {
+                position: relative;
+                left: toRem(100);
+                bottom: toRem(110);
+                width: toRem(310);
+                height: toRem(100);
+                flex-direction: column;
+                justify-content: center;
+                padding-left: toRem(25);
+
+                .name {
+                    font-size: toRem(26);
+                }
+
+                .dev {
+                    font-size: toRem(18);
+                }
+            }
+
+            .principalImg {
+                position: relative;
+                top: toRem(80);
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+
+                .zep {
+                    position: relative;
+                    width: toRem(210);
+                }
+
+                .bugcat {
+                    position: relative;
+                    width: toRem(80);
+                    bottom: toRem(60);
+                    left: toRem(130);
+                }
+
+            }
+        }
+
+        .sqr2 {
+            width: 100%;
+            height: toRem(100);
+            background-color: $drk;
+
+            .navbarParallax {
+                display: none;
+                position: fixed;
+                top: 0;
+                height: toRem(80);
+                width: 100%;
+                flex-wrap: nowrap;
+                align-items: center;
+                gap: toRem(65);
+                padding-left: toRem(110);
+                background-color: $drk;
+                z-index: 10;
+
+                .logoDesk {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: toRem(90);
+                    height: toRem(40);
+                    background-color: $drk;
+                    border: $lgt toRem(1) solid;
+                    text-align: right;
+
+
+                    .logoDeskContent {
+                        text-decoration: none;
+                        @include fontSettings("Comfortaa-Regular", $lgt, 30);
+                    }
+                }
+
+                .logoDesk:hover {
+                    background-color: $drk;
+                    border: $lgt toRem(2) solid;
+
+                    .logoDeskContent {
+                        color: $lgt;
+                        font-weight: bold;
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    gap: toRem(55);
+
+                    li {
+                        a {
+                            text-decoration: none;
+                            @include fontSettings("Urbanist-Regular", $lgt, 18)
+                        }
+
+                        a:hover {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .aboutVis {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            gap: toRem(40);
+            padding-left: toRem(110);
+            padding-right: toRem(110);
+            z-index: 0;
+            background-color: $lgt;
+
+            .titleAboutVis {
+                font-size: toRem(35);
+            }
+
+            .aboutVisDesc {
+                font-size: toRem(18);
+                line-height: toRem(35);
+            }
+
+            .readMoreAbout {
+                font-size: toRem(18);
+            }
+        }
+
+        .aboutHid {
+            display: none;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100vh 100vh;
+
+            .aboutHidItem2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                gap: toRem(0);
+                padding: toRem(80) toRem(140) toRem(80) toRem(110);
+                background-color: $drk;
+
+                .aboutHidTitle1 {
+                    font-size: toRem(40);
+                    line-height: toRem(55);
+                    overflow-y: hidden;
+                }
+
+                .aboutHidDesc1 {
+                    font-size: toRem(18);
+                    line-height: toRem(35);
+                }
+            }
+
+            .aboutHidItem4 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: toRem(80) toRem(110) toRem(80) toRem(110);
+
+                .aboutHidTitle2 {
+                    font-size: toRem(40);
+                }
+
+                .aboutHidDesc2 {
+                    font-size: toRem(18);
+                    line-height: toRem(35);
+                }
+
+                .readLessAbout {
+                    font-size: toRem(18);
+                }
+            }
+
+
+        }
+
+        .skills {
+            padding-bottom: toRem(150);
+
+            .skillsTitle {
+                margin-left: toRem(110);
+                font-size: toRem(35);
+            }
+
+            .skillsGrid {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: auto auto auto auto auto;
+                gap: toRem(200);
+
+                .titleSkItem {
+                    font-size: toRem(30);
+                    font-family: "Urbanist-Regular";
+
+                }
+
+                .skItem1,
+                .skItem2,
+                .skItem3,
+                .skItem4,
+                .skItem5 {
+                    padding-right: toRem(110);
+                    padding-left: toRem(110);
+                    gap: toRem(80);
+                    overflow-y: hidden;
+
+                    .iconItemBox {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-evenly;
+                        gap: toRem(30);
+
+                        .iconBox {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            width: toRem(120);
+                            height: toRem(180);
+                            gap: toRem(40);
+
+                            img {
+                                width: toRem(80);
+                            }
+
+                            .iconName {
+                                font-size: toRem(18);
+                            }
+                        }
+                    }
+
+                }
+
+                .skItem2.hid,
+                .skItem3.hid,
+                .skItem4.hid,
+                .skItem5.hid {
+                    display: none;
+                }
+
+                #seeMore {
+                    height: toRem(30);
+                    width: toRem(70);
+                    text-align: left;
+                    @include fontSettings("Comfortaa-SemiBold", $drk, 15);
+                    border: none;
+                    background-color: transparent;
+                }
+
+                #seeMore:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .skillsGrid.dis {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+                gap: toRem(80);
+            }
+        }
+
+        .projects {
+
+            .portrait {
+                .projectsTitle {
+                    position: absolute;
+                    transform: translate(48%, 850%);
+
+                    font-size: toRem(35);
+                }
+
+            }
+
+            .containerProjects {
+                height: auto;
+
+                .projectsGrid {
+                    height: 170vh;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    row-gap: toRem(15);
+                    column-gap: toRem(15);
+                    padding-top: toRem(70);
+                    padding-bottom: toRem(70);
+                    padding-left: toRem(110);
+                    padding-right: toRem(110);
+                    overflow-y: hidden;
+
+                    .project {
+                        height: auto;
+
+                        .projectHover {
+
+                            input:hover {
+                                background-color: rgba(153, 205, 50, 0.521);
+                            }
+                        }
+
+                        .modalWrapper {
+
+                            .modal {
+                                width: 70%;
+                                height: 80vh;
+                                position: relative;
+                                top: 10%;
+                                margin: 0 auto 0 auto;
+                                background-color: $drk;
+
+                                .closeModal {
+                                    width: toRem(45);
+                                    height: toRem(45);
+                                    padding-left: toRem(10);
+                                    position: absolute;
+                                    right: toRem(0);
+                                    top: toRem(10);
+                                    overflow-y: hidden;
+                                    @include fontSettings("Urbanist-Regular", $lgt, 30);
+                                    background-color: transparent;
+                                }
+
+                                .modalContent {
+                                    height: 100%;
+                                    display: grid;
+                                    grid-template-columns: 65% 35%;
+                                    grid-template-rows: 100%;
+
+                                    .modalImgContainer {
+                                        width: 100%;
+                                        overflow-y: hidden;
+
+                                        .modalImg {
+                                            height: 100%;
+                                        }
+                                    }
+
+                                    .modalTextContainer {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-evenly;
+                                        gap: toRem(10);
+                                        padding-left: toRem(40);
+
+                                        .modalTitle {
+                                            @include fontSettings("Comfortaa-Regular", $lgt, 25)
+                                        }
+
+                                        .modalInfo {
+                                            @include fontSettings("Urbanist-Regular", $lgt, 15)
+                                        }
+
+                                        .projectLink {
+                                            @include fontSettings('Urbanist-Semibold', $lgt, 18);
+                                            text-decoration: none;
+                                        }
+
+                                        .projectLink:hover {
+                                            color: $bas;
+                                        }
+                                    }
+
+                                }
+
+                                @supports (object-fit:cover) {
+                                    .modalImgContainer {
+                                        .modalImg {
+                                            height: 100%;
+                                            object-fit: cover;
+                                            object-position: center center;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    #p1 {
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+
+                        .projectHover {
+                            margin-left: toRem(30);
+                            width: 20%;
+
+                            .projectName {
+                                font-size: toRem(25);
+                            }
+
+                            .projectDesc {
+                                font-size: toRem(16);
+                                line-height: toRem(25);
+                            }
+
+                            input {
+                                width: toRem(100);
+                            }
+                        }
+                    }
+
+                    #p2 {
+                        grid-column: 2/3;
+                        grid-row: 1/2;
+
+                        .projectHover {
+                            margin-left: toRem(30);
+                            width: 20%;
+
+                            .projectName {
+                                font-size: toRem(25);
+                            }
+
+                            .projectDesc {
+                                font-size: toRem(16);
+                                line-height: toRem(25);
+                            }
+
+                            input {
+                                width: toRem(100);
+                            }
+                        }
+                    }
+
+                    #p3 {
+                        grid-column: 3/4;
+                        grid-row: 1/3;
+
+                        .projectHover {
+                            margin-left: toRem(30);
+                            width: 20%;
+
+                            .projectName {
+                                font-size: toRem(25);
+                            }
+
+                            .projectDesc {
+                                font-size: toRem(18);
+                                line-height: toRem(40);
+                            }
+
+                            input {
+                                width: toRem(100);
+                            }
+                        }
+                    }
+
+                    #p4 {
+                        grid-column: 1/3;
+                        grid-row: 2/4;
+
+                        .projectHover {
+                            margin-left: toRem(70);
+                            width: 20%;
+
+                            .projectName {
+                                font-size: toRem(40);
+                                overflow-y: hidden;
+                            }
+
+                            .projectDesc {
+                                font-size: toRem(18);
+                                line-height: toRem(40);
+                            }
+
+                            input {
+                                width: toRem(150);
+                            }
+                        }
+
+
+                    }
+
+                    #p5 {
+                        grid-column: 3/4;
+                        grid-row: 3/4;
+
+                        .projectHover {
+                            margin-left: toRem(30);
+                            width: 20%;
+
+                            .projectName {
+                                font-size: toRem(25);
+                            }
+
+                            .projectDesc {
+                                font-size: toRem(16);
+                                line-height: toRem(25);
+                            }
+
+                            input {
+                                width: toRem(100);
+                            }
+                        }
+                    }
+
+                    @supports (object-fit:cover) {
+                        .project {
+                            .projectImg {
+                                height: 100%;
+                                object-fit: cover;
+                                object-position:
+                                    center center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer {
+            padding-left: toRem(110);
+            padding-right: toRem(110);
+            gap: toRem(60);
+
+            h1 {
+                font-size: toRem(35);
+                line-height: toRem(45);
+            }
+
+            .icons {
+                display: flex;
+                gap: toRem(30);
+
+                i {
+                    font-size: toRem(30);
+                    color: $lgt;
+                }
+
+                i:hover {
+                    color: $bas;
+                }
+            }
+
+            .otherOption {
+                text-align: left;
+                line-height: toRem(30);
+                @include fontSettings("Urbanist-Regular", $lgt, 18);
+
+                span {
+                    font-weight: bold;
+                }
+
+                span:hover {
+                    color: $bas;
+                }
+            }
+
+            small {
+                bottom: toRem(0);
+            }
+
         }
     }
 }
