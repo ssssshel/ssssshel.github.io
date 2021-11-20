@@ -19,7 +19,7 @@
 }
 
 @mixin desktop {
-    @media(min-width: 75rem) {
+    @media(min-width: 65.625rem) {
         @content;
     }
 }

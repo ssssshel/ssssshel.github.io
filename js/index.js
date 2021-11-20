@@ -104,10 +104,10 @@ arBtn.forEach(item =>{
     item.addEventListener('click', ()=>{
         modal.style.display = 'block';
         if(arBtn.indexOf(item) == 0){
-            pImg.setAttribute("src", "layouts/img/phones.jpg");
-            pTitle.innerHTML = "Proyecto 1";
-            pInfo.innerHTML = "Descripcion proyecto 1";
-            pLink.setAttribute("href", "#");
+            pImg.setAttribute("src", "layouts/img/cv.jpg");
+            pTitle.innerHTML = "CV - RESUME";
+            pInfo.innerHTML = "Curriculum bilingüe desarrollado con ayuda de HTML, CSS, Sass y una pequeña cantidad de JS para configurar el DOM.";
+            pLink.setAttribute("href", "https://ssssshel.github.io/ssssshelResume/es/index.html");
         }else if(arBtn.indexOf(item) == 1){
             pImg.setAttribute("src", "layouts/img/code-g32e764a34_1920.jpg");
             pTitle.innerHTML = "Proyecto 2";

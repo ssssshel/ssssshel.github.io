@@ -17,6 +17,9 @@
     align-items: center;
     z-index: 0;
 
+    * {
+        overflow: hidden;
+    }
 
     .principal {
         position: relative;
@@ -532,9 +535,6 @@
 
                             .modalContent {
                                 height: 100%;
-                                // display: flex;
-                                // flex-direction: column;
-                                // gap: toRem(20);
                                 display: grid;
                                 grid-template-columns: 100%;
                                 grid-template-rows: 35% 65%;
@@ -555,6 +555,7 @@
                                     justify-content: space-evenly;
                                     gap: toRem(10);
                                     padding-left: toRem(20);
+                                    padding-right: toRem(40);
 
                                     .modalTitle {
                                         @include fontSettings("Comfortaa-Regular", $drk, 25)
@@ -1644,6 +1645,7 @@
                                         justify-content: space-evenly;
                                         gap: toRem(10);
                                         padding-left: toRem(40);
+                                        padding-right: toRem(60);
 
                                         .modalTitle {
                                             @include fontSettings("Comfortaa-Regular", $lgt, 25)
