@@ -109,10 +109,10 @@ arBtn.forEach(item =>{
             pInfo.innerHTML = "Curriculum bilingüe desarrollado con ayuda de HTML, CSS, Sass y una pequeña cantidad de JS para configurar el DOM.";
             pLink.setAttribute("href", "https://ssssshel.github.io/ssssshelResume/es/index.html");
         }else if(arBtn.indexOf(item) == 1){
-            pImg.setAttribute("src", "layouts/img/code-g32e764a34_1920.jpg");
-            pTitle.innerHTML = "Proyecto 2";
-            pInfo.innerHTML = "Descripcion proyecto 2";
-            pLink.setAttribute("href", "#");
+            pImg.setAttribute("src", "layouts/img/xeon.jpeg");
+            pTitle.innerHTML = "Xeon";
+            pInfo.innerHTML = "Desarrollo web para una tienda de celulares y accesorios; enfocada en su promoción, venta y entrega al consumidor final. <br> Tecnologías empleadas: EJS, CSS, JS, Node, Express y MongoDB. <br>No responsive, visualizar en pantallas > 1200px";
+            pLink.setAttribute("href", "https://xeon11.herokuapp.com/");
         }else if(arBtn.indexOf(item) == 2){
             pImg.setAttribute("src", "layouts/img/edit2.jpg");
             pTitle.innerHTML = "Proyecto 3";
