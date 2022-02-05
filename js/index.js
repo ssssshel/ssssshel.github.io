@@ -114,7 +114,7 @@ arBtn.forEach(item =>{
             pInfo.innerHTML = "Desarrollo web para una tienda de celulares y accesorios; enfocada en su promoción, venta y entrega al consumidor final. <br> Tecnologías empleadas: EJS, CSS, JS, Node, Express y MongoDB. <br>No responsive, visualizar en pantallas > 1200px";
             pLink.setAttribute("href", "https://xeon11.herokuapp.com/");
         }else if(arBtn.indexOf(item) == 2){
-            pImg.setAttribute("src", "layouts/img/Captura de pantalla 2022-02-04 202240.jpg");
+            pImg.setAttribute("src", "layouts/img/Captura2022-02-04 202240.jpg");
             pTitle.innerHTML = "Dione";
             pInfo.innerHTML = "Enciclopedia virtual del sistema solar. Desarrollada con ReactJS, NextJS, MongoDB y Tailwind";
             pLink.setAttribute("href", "#");
