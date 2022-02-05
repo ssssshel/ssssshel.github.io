@@ -115,8 +115,8 @@ arBtn.forEach(item =>{
             pLink.setAttribute("href", "https://xeon11.herokuapp.com/");
         }else if(arBtn.indexOf(item) == 2){
             pImg.setAttribute("src", "layouts/img/edit2.jpg");
-            pTitle.innerHTML = "Proyecto 3";
-            pInfo.innerHTML = "Descripcion proyecto 3";
+            pTitle.innerHTML = "Dione";
+            pInfo.innerHTML = "Enciclopedia virtual del sistema solar. Desarrollada con ReactJS, NextJS, MongoDB y Tailwind";
             pLink.setAttribute("href", "#");
         }else if(arBtn.indexOf(item) == 3){    
             pImg.setAttribute("src", "layouts/img/coding-g718912481_1920.jpg");        
