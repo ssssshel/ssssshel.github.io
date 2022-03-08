@@ -528,6 +528,7 @@
                                 position: absolute;
                                 right: toRem(0);
                                 top: toRem(0);
+                                cursor: pointer;
                                 overflow-y: hidden;
                                 @include fontSettings("Urbanist-Regular", $drk, 30);
                                 background-color: rgba(255, 255, 255, 0.445)

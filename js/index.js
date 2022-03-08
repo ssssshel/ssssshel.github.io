@@ -117,7 +117,7 @@ arBtn.forEach(item =>{
             pImg.setAttribute("src", "layouts/img/Captura2022-02-04 202240.jpg");
             pTitle.innerHTML = "Dione";
             pInfo.innerHTML = "Enciclopedia virtual del sistema solar. Desarrollada con ReactJS, NextJS, MongoDB y Tailwind";
-            pLink.setAttribute("href", "#");
+            pLink.setAttribute("href", "https://dione.vercel.app/");
         }else if(arBtn.indexOf(item) == 3){    
             pImg.setAttribute("src", "layouts/img/coding-g718912481_1920.jpg");        
             pTitle.innerHTML = "Proyecto 4"

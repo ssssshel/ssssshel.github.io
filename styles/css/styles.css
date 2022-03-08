@@ -1,1341 +1,2045 @@
 @font-face {
   font-family: "Comfortaa-Regular";
-  src: url(/layouts/fonts/Comfortaa-Regular.ttf); }
+  src: url(/layouts/fonts/Comfortaa-Regular.ttf);
+}
 
 @font-face {
   font-family: "Comfortaa-Semibold";
-  src: url(/layouts/fonts/Comfortaa-SemiBold.ttf); }
+  src: url(/layouts/fonts/Comfortaa-SemiBold.ttf);
+}
 
 @font-face {
   font-family: "Comfortaa-Light";
-  src: url(/layouts/fonts/Comfortaa-Light.ttf); }
+  src: url(/layouts/fonts/Comfortaa-Light.ttf);
+}
 
 @font-face {
   font-family: "Urbanist-Regular";
-  src: url(/layouts/fonts/Urbanist-Regular.ttf); }
+  src: url(/layouts/fonts/Urbanist-Regular.ttf);
+}
 
 @font-face {
   font-family: "Urbanist-Semibold";
-  src: url(/layouts/fonts/Urbanist-SemiBold.ttf); }
+  src: url(/layouts/fonts/Urbanist-SemiBold.ttf);
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 .container {
   width: 100%;
-  background-color: #E9E9ED;
+  background-color: #e9e9ed;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 0; }
-  .container * {
-    overflow: hidden; }
+  z-index: 0;
+}
+.container * {
+  overflow: hidden;
+}
+.container .principal {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #bbbac6;
+  z-index: 1;
+}
+.container .principal .navbarVis {
+  display: none;
+}
+.container .principal .navbarHid {
+  height: 4.375rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  padding-left: 2.625rem;
+  padding-right: 2.625rem;
+  z-index: 4;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e9e9ed65;
+  filter: brightness(0.8);
+  backdrop-filter: blur(0.3125rem);
+}
+.container .principal .navbarHid #btnBurg {
+  position: relative;
+  box-sizing: border-box;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: transparent;
+  border: none;
+  overflow-y: hidden;
+}
+.container .principal .navbarHid #btnBurg .fa-bars {
+  width: 2.1875rem;
+  position: relative;
+  top: 0.3125rem;
+  margin-bottom: 0.625rem;
+  color: #17171c;
+  pointer-events: none;
+}
+.container .principal .navbarHid #btnBurg .fa-times {
+  width: 1.5625rem;
+  color: #17171c;
+  pointer-events: none;
+}
+.container .principal .navbarHid #btnBurg .fa-bars.hid {
+  display: none;
+}
+.container .principal .navbarHid .logohid {
+  box-sizing: border-box;
+  width: 5.75rem;
+  height: 2.5rem;
+  position: relative;
+  background-color: transparent;
+  border: #17171c 0.125rem solid;
+  text-decoration: none;
+  text-align: right;
+}
+.container .principal .navbarHid .logohid .contentLogo span {
+  font-family: "Comfortaa-Light";
+  color: #17171c;
+  font-size: 1.875rem;
+}
+.container .principal .navbarHid .logo:hover {
+  background-color: #17171c33;
+}
+.container .principal .navHid {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 110%;
+  padding-left: 2.625rem;
+  padding-right: 2.625rem;
+  z-index: 3;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #e9e9ed65;
+  filter: brightness(0.8);
+  backdrop-filter: blur(0.3125rem);
+}
+.container .principal .navHid ul {
+  position: relative;
+  top: 6.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  z-index: 3;
+}
+.container .principal .navHid ul li {
+  padding-bottom: 0.625rem;
+  border-bottom: 0.0625rem solid #17171c;
+}
+.container .principal .navHid ul li a {
+  text-decoration: none;
+  font-family: "Urbanist-Regular";
+  color: #17171c;
+  font-size: 1rem;
+}
+.container .principal .navHid ul a:hover {
+  background-color: #85776446;
+}
+.container .principal .navHid.see {
+  left: 0;
+}
+.container .principal .card {
+  position: relative;
+  left: 2.5rem;
+  width: 40%;
+  height: 6.25rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0.625rem;
+  background-color: #17171c;
+}
+.container .principal .card .name {
+  font-family: "Comfortaa-Light";
+  color: #e9e9ed;
+  font-size: 1.5rem;
+}
+.container .principal .card .dev {
+  font-family: "Urbanist-Regular";
+  color: #e9e9ed;
+  font-size: 0.875rem;
+}
+.container .principal .principalImg {
+  position: relative;
+  top: 6.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+.container .principal .principalImg .zep {
+  position: relative;
+  width: 12.5rem;
+}
+.container .principal .principalImg .bugcat {
+  position: relative;
+  width: 5rem;
+  bottom: 3.75rem;
+  left: 8.125rem;
+}
+.container .principal .sqr {
+  height: 1px;
+}
+.container .navbarParallax {
+  display: none;
+}
+.container .aboutVis {
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 2.625rem;
+  padding-right: 2.625rem;
+  z-index: 0;
+  background-color: #e9e9ed;
+}
+.container .aboutVis .titleAboutVis {
+  font-family: "Comfortaa-Regular";
+  color: #17171c;
+  font-size: 1.875rem;
+}
+.container .aboutVis .aboutVisDesc {
+  font-family: "Urbanist-Regular";
+  color: #17171c;
+  font-size: 0.9375rem;
+  line-height: 1.875rem;
+}
+.container .aboutVis .readMoreAbout {
+  font-family: "Comfortaa-Semibold";
+  color: #17171c;
+  font-size: 1rem;
+}
+.container .aboutVis .readMoreAbout:hover {
+  text-decoration: underline;
+}
+.container .aboutHid {
+  display: none;
+  grid-template-columns: 100%;
+  grid-template-rows: 50vh 65vh 50vh 60vh;
+  width: 100%;
+}
+.container .aboutHid .aboutHidItem1 {
+  overflow-y: hidden;
+}
+.container .aboutHid .aboutHidItem1 img {
+  width: 100%;
+  height: auto;
+}
+@supports (object-fit: cover) {
+  .container .aboutHid .aboutHidItem1 img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.container .aboutHid .aboutHidItem2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 2.625rem;
+  padding-right: 4.5rem;
+  background-color: #17171c;
+}
+.container .aboutHid .aboutHidItem2 .aboutHidTitle1 {
+  font-family: "Comfortaa-Regular";
+  color: #e9e9ed;
+  font-size: 1.875rem;
+}
+.container .aboutHid .aboutHidItem2 .aboutHidDesc1 {
+  font-family: "Urbanist-Regular";
+  color: #e9e9ed;
+  font-size: 0.875rem;
+  line-height: 1.875rem;
+}
+.container .aboutHid .aboutHidItem3 {
+  overflow-y: hidden;
+}
+.container .aboutHid .aboutHidItem3 img {
+  width: 100%;
+  height: auto;
+}
+@supports (object-fit: cover) {
+  .container .aboutHid .aboutHidItem3 img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.container .aboutHid .aboutHidItem4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 2.625rem;
+  padding-right: 4.5rem;
+  background-color: #b2b0bf;
+}
+.container .aboutHid .aboutHidItem4 .aboutHidTitle2 {
+  font-family: "Comfortaa-Regular";
+  color: #17171c;
+  font-size: 1.875rem;
+}
+.container .aboutHid .aboutHidItem4 .aboutHidDesc2 {
+  font-family: "Urbanist-Regular";
+  color: #17171c;
+  font-size: 0.9375rem;
+  line-height: 1.875rem;
+}
+.container .aboutHid .aboutHidItem4 .readLessAbout {
+  font-family: "Comfortaa-Semibold";
+  color: #17171c;
+  font-size: 0.875rem;
+}
+.container .aboutHid .aboutHidItem4 .readLessAbout:hover {
+  text-decoration: underline;
+}
+.container .skills {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 3.75rem;
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+  background-color: #e9e9ed;
+}
+.container .skills .skillsTitle {
+  margin-left: 2.625rem;
+  font-family: "Comfortaa-Regular";
+  color: #17171c;
+  font-size: 1.875rem;
+}
+.container .skills .skillsGrid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 5rem;
+}
+.container .skills .skillsGrid .titleSkItem {
+  font-family: "Comfortaa-Regular";
+  color: #17171c;
+  font-size: 1.25rem;
+}
+.container .skills .skillsGrid .skItem1,
+.container .skills .skillsGrid .skItem2,
+.container .skills .skillsGrid .skItem3,
+.container .skills .skillsGrid .skItem4,
+.container .skills .skillsGrid .skItem5 {
+  padding-right: 2.625rem;
+  padding-left: 2.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+  justify-content: space-around;
+  overflow-y: hidden;
+}
+.container .skills .skillsGrid .skItem1 .iconItemBox,
+.container .skills .skillsGrid .skItem2 .iconItemBox,
+.container .skills .skillsGrid .skItem3 .iconItemBox,
+.container .skills .skillsGrid .skItem4 .iconItemBox,
+.container .skills .skillsGrid .skItem5 .iconItemBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1.875rem;
+}
+.container .skills .skillsGrid .skItem1 .iconItemBox .iconBox,
+.container .skills .skillsGrid .skItem2 .iconItemBox .iconBox,
+.container .skills .skillsGrid .skItem3 .iconItemBox .iconBox,
+.container .skills .skillsGrid .skItem4 .iconItemBox .iconBox,
+.container .skills .skillsGrid .skItem5 .iconItemBox .iconBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 5.625rem;
+  height: 7.5rem;
+  gap: 1.25rem;
+}
+.container .skills .skillsGrid .skItem1 .iconItemBox .iconBox img,
+.container .skills .skillsGrid .skItem2 .iconItemBox .iconBox img,
+.container .skills .skillsGrid .skItem3 .iconItemBox .iconBox img,
+.container .skills .skillsGrid .skItem4 .iconItemBox .iconBox img,
+.container .skills .skillsGrid .skItem5 .iconItemBox .iconBox img {
+  width: 3.125rem;
+}
+.container .skills .skillsGrid .skItem1 .iconItemBox .iconBox .iconName,
+.container .skills .skillsGrid .skItem2 .iconItemBox .iconBox .iconName,
+.container .skills .skillsGrid .skItem3 .iconItemBox .iconBox .iconName,
+.container .skills .skillsGrid .skItem4 .iconItemBox .iconBox .iconName,
+.container .skills .skillsGrid .skItem5 .iconItemBox .iconBox .iconName {
+  font-family: "Urbanist-Regular";
+  color: #17171c;
+  font-size: 0.9375rem;
+}
+.container .skills .skillsGrid .skItem1 .iconItemBox .iconBox:hover,
+.container .skills .skillsGrid .skItem2 .iconItemBox .iconBox:hover,
+.container .skills .skillsGrid .skItem3 .iconItemBox .iconBox:hover,
+.container .skills .skillsGrid .skItem4 .iconItemBox .iconBox:hover,
+.container .skills .skillsGrid .skItem5 .iconItemBox .iconBox:hover {
+  background-color: #17171c33;
+}
+.container .skills .skillsGrid .skItem2.hid,
+.container .skills .skillsGrid .skItem3.hid,
+.container .skills .skillsGrid .skItem4.hid,
+.container .skills .skillsGrid .skItem5.hid {
+  display: none;
+}
+.container .skills .skillsGrid #seeMore {
+  height: 1.875rem;
+  width: 4.375rem;
+  text-align: left;
+  font-family: "Comfortaa-SemiBold";
+  color: #17171c;
+  font-size: 0.9375rem;
+  border: none;
+  background-color: transparent;
+}
+.container .skills .skillsGrid #seeMore:hover {
+  text-decoration: underline;
+}
+.container .skills .skillsGrid.dis {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  gap: 5rem;
+}
+.container .projects {
+  width: 100%;
+  height: auto;
+  background-color: #e9e9ed;
+  display: flex;
+  flex-direction: column;
+}
+.container .projects .portrait {
+  height: 100vh;
+  overflow-y: hidden;
+  display: inline-block;
+  text-align: center;
+}
+.container .projects .portrait .projectsTitle {
+  position: absolute;
+  transform: translate(20%, 1100%);
+  font-family: "Comfortaa-SemiBold";
+  color: #e9e9ed;
+  font-size: 1.875rem;
+}
+@supports (object-fit: cover) {
+  .container .projects .portrait img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.container .projects .containerProjects .projectsGrid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto auto;
+  row-gap: 1%;
+  padding-top: 2.5rem;
+  padding-bottom: 7.5rem;
+  padding-left: 2.625rem;
+  padding-right: 2.625rem;
+  overflow-y: hidden;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project:hover
+  .projectImg {
+  filter: brightness(0.75);
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project:hover
+  .projectHover {
+  opacity: 1;
+}
+.container .projects .containerProjects .projectsGrid .project {
+  height: 50vh;
+  width: auto;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.container .projects .containerProjects .projectsGrid .project .projectImg {
+  width: 100%;
+  height: auto;
+  filter: brightness(0.4);
+}
+.container .projects .containerProjects .projectsGrid .project .projectHover {
+  width: 50%;
+  height: 35vh;
+  margin-left: 1.875rem;
+  margin-top: 3.75rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow-y: hidden;
+  opacity: 0;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .projectHover
+  .projectName {
+  font-family: "Comfortaa-Regular";
+  color: #e9e9ed;
+  font-size: 1.25rem;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .projectHover
+  .projectDesc {
+  overflow-y: hidden;
+  line-height: 1.875rem;
+  font-family: "Urbanist-Regular";
+  color: #e9e9ed;
+  font-size: 0.9375rem;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .projectHover
+  input {
+  width: 25vw;
+  height: 12%;
+  background-color: #17171c86;
+  backdrop-filter: blur(10);
+  border: none;
+  font-family: "Urbanist-Regular";
+  color: #e9e9ed;
+  font-size: 0.9375rem;
+  text-align: left;
+  padding-left: 0.3125rem;
+}
+.container .projects .containerProjects .projectsGrid .project .modalWrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  display: none;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .modalWrapper
+  .modal {
+  width: 70%;
+  height: 70vh;
+  position: relative;
+  top: 15%;
+  margin: 0 auto 0 auto;
+  background-color: #e9e9ed;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .modalWrapper
+  .modal
+  .closeModal {
+  width: 1.875rem;
+  height: 2.1875rem;
+  padding-left: 0.3125rem;
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  overflow-y: hidden;
+  font-family: "Urbanist-Regular";
+  color: #17171c;
+  cursor: pointer;
+  font-size: 1.875rem;
+  background-color: rgba(255, 255, 255, 0.445);
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .modalWrapper
+  .modal
+  .modalContent {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 35% 65%;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .modalWrapper
+  .modal
+  .modalContent
+  .modalImgContainer {
+  width: 100%;
+  overflow-y: hidden;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .modalWrapper
+  .modal
+  .modalContent
+  .modalImgContainer
+  .modalImg {
+  width: 100%;
+  height: auto;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .modalWrapper
+  .modal
+  .modalContent
+  .modalTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 2.5rem;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .modalWrapper
+  .modal
+  .modalContent
+  .modalTextContainer
+  .modalTitle {
+  font-family: "Comfortaa-Regular";
+  color: #17171c;
+  font-size: 1.5625rem;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .modalWrapper
+  .modal
+  .modalContent
+  .modalTextContainer
+  .modalInfo {
+  font-family: "Urbanist-Regular";
+  color: #17171c;
+  font-size: 0.9375rem;
+}
+.container
+  .projects
+  .containerProjects
+  .projectsGrid
+  .project
+  .modalWrapper
+  .modal
+  .modalContent
+  .modalTextContainer
+  .projectLink {
+  font-family: "Urbanist-Semibold";
+  color: #17171c;
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+@supports (object-fit: cover) {
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalImgContainer
+    .modalImg {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+@supports (object-fit: cover) {
+  .container .projects .containerProjects .projectsGrid .project .projectImg {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.container .footer {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2.625rem;
+  padding-right: 2.625rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.875rem;
+  flex-direction: column;
+  background-color: #17171c;
+}
+.container .footer h1 {
+  text-align: left;
+  line-height: 2.5rem;
+  font-family: "Comfortaa-Regular";
+  color: #e9e9ed;
+  font-size: 1.875rem;
+}
+.container .footer .contact {
+  text-align: left;
+  line-height: 1.875rem;
+  font-family: "Urbanist-Regular";
+  color: #e9e9ed;
+  font-size: 1.25rem;
+}
+.container .footer .icons {
+  display: flex;
+  gap: 1.25rem;
+}
+.container .footer .icons i {
+  font-size: 1.5rem;
+  color: #e9e9ed;
+}
+.container .footer .otherOption {
+  text-align: left;
+  line-height: 1.875rem;
+  font-family: "Urbanist-Regular";
+  color: #e9e9ed;
+  font-size: 1.125rem;
+}
+.container .footer .otherOption span {
+  font-weight: bold;
+}
+.container .footer small {
+  font-family: "Urbanist-Regular";
+  color: #17171c;
+  font-size: 0.875rem;
+  position: relative;
+  bottom: -9.375rem;
+  align-self: flex-end;
+  color: #e9e9ed;
+}
+@media (min-width: 37.5rem) {
   .container .principal {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow-y: hidden;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #BBBAC6;
-    z-index: 1; }
-    .container .principal .navbarVis {
-      display: none; }
-    .container .principal .navbarHid {
-      height: 4.375rem;
-      width: 100%;
-      box-sizing: border-box;
-      position: fixed;
-      padding-left: 2.625rem;
-      padding-right: 2.625rem;
-      z-index: 4;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #e9e9ed65;
-      filter: brightness(0.8);
-      backdrop-filter: blur(0.3125rem); }
-      .container .principal .navbarHid #btnBurg {
-        position: relative;
-        box-sizing: border-box;
-        width: 1.875rem;
-        height: 1.875rem;
-        background-color: transparent;
-        border: none;
-        overflow-y: hidden; }
-        .container .principal .navbarHid #btnBurg .fa-bars {
-          width: 2.1875rem;
-          position: relative;
-          top: 0.3125rem;
-          margin-bottom: 0.625rem;
-          color: #17171C;
-          pointer-events: none; }
-        .container .principal .navbarHid #btnBurg .fa-times {
-          width: 1.5625rem;
-          color: #17171C;
-          pointer-events: none; }
-        .container .principal .navbarHid #btnBurg .fa-bars.hid {
-          display: none; }
-      .container .principal .navbarHid .logohid {
-        box-sizing: border-box;
-        width: 5.75rem;
-        height: 2.5rem;
-        position: relative;
-        background-color: transparent;
-        border: #17171C 0.125rem solid;
-        text-decoration: none;
-        text-align: right; }
-        .container .principal .navbarHid .logohid .contentLogo span {
-          font-family: "Comfortaa-Light";
-          color: #17171C;
-          font-size: 1.875rem; }
-      .container .principal .navbarHid .logo:hover {
-        background-color: #17171c33; }
-    .container .principal .navHid {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: -100%;
-      width: 100%;
-      height: 110%;
-      padding-left: 2.625rem;
-      padding-right: 2.625rem;
-      z-index: 3;
-      overflow-y: hidden;
-      display: flex;
-      flex-direction: column;
-      background-color: #e9e9ed65;
-      filter: brightness(0.8);
-      backdrop-filter: blur(0.3125rem); }
-      .container .principal .navHid ul {
-        position: relative;
-        top: 6.25rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1.875rem;
-        z-index: 3; }
-        .container .principal .navHid ul li {
-          padding-bottom: 0.625rem;
-          border-bottom: 0.0625rem solid #17171C; }
-          .container .principal .navHid ul li a {
-            text-decoration: none;
-            font-family: "Urbanist-Regular";
-            color: #17171C;
-            font-size: 1rem; }
-        .container .principal .navHid ul a:hover {
-          background-color: #85776446; }
-    .container .principal .navHid.see {
-      left: 0; }
-    .container .principal .card {
-      position: relative;
-      left: 2.5rem;
-      width: 40%;
-      height: 6.25rem;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 0.625rem;
-      background-color: #17171C; }
-      .container .principal .card .name {
-        font-family: "Comfortaa-Light";
-        color: #E9E9ED;
-        font-size: 1.5rem; }
-      .container .principal .card .dev {
-        font-family: "Urbanist-Regular";
-        color: #E9E9ED;
-        font-size: 0.875rem; }
-    .container .principal .principalImg {
-      position: relative;
-      top: 6.25rem;
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-      flex-direction: column; }
-      .container .principal .principalImg .zep {
-        position: relative;
-        width: 12.5rem; }
-      .container .principal .principalImg .bugcat {
-        position: relative;
-        width: 5rem;
-        bottom: 3.75rem;
-        left: 8.125rem; }
-    .container .principal .sqr {
-      height: 1px; }
-  .container .navbarParallax {
-    display: none; }
+    /* NAV */
+  }
+  .container .principal .navbarHid {
+    height: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    z-index: 4;
+  }
+  .container .principal .navbarHid .logohid {
+    box-sizing: border-box;
+    width: 6.25rem;
+    height: 2.8125rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .container .principal .navbarHid .logohid .contentLogo span {
+    font-family: "Comfortaa-Light";
+    color: #17171c;
+    font-size: 2rem;
+  }
+  .container .principal .navHid {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    z-index: 3;
+    top: 1.875rem;
+  }
+  .container .principal .navHid ul {
+    gap: 3.125rem;
+  }
+  .container .principal .navHid ul li a {
+    font-size: 1.0625rem;
+  }
+  .container .principal .card {
+    bottom: 4.375rem;
+    height: 6.875rem;
+    margin-left: 1.25rem;
+  }
+  .container .principal .card .dev {
+    font-size: 1rem;
+  }
+  .container .principal .principalImg {
+    position: relative;
+    top: 6.25rem;
+  }
+  .container .principal .principalImg .zep {
+    position: relative;
+    width: 18.75rem;
+  }
+  .container .principal .principalImg .bugcat {
+    width: 7.5rem;
+    bottom: 6.25rem;
+    left: 11.875rem;
+  }
   .container .aboutVis {
-    position: relative;
-    width: 100%;
-    height: 120vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: 2.625rem;
-    padding-right: 2.625rem;
-    z-index: 0;
-    background-color: #E9E9ED; }
-    .container .aboutVis .titleAboutVis {
-      font-family: "Comfortaa-Regular";
-      color: #17171C;
-      font-size: 1.875rem; }
-    .container .aboutVis .aboutVisDesc {
-      font-family: "Urbanist-Regular";
-      color: #17171C;
-      font-size: 0.9375rem;
-      line-height: 1.875rem; }
-    .container .aboutVis .readMoreAbout {
-      font-family: "Comfortaa-Semibold";
-      color: #17171C;
-      font-size: 1rem; }
-    .container .aboutVis .readMoreAbout:hover {
-      text-decoration: underline; }
+    height: 90vh;
+    gap: 5.625rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .container .aboutVis .titleAboutVis {
+    font-size: 2.0625rem;
+  }
+  .container .aboutVis .aboutVisDesc {
+    font-family: "Urbanist-Regular";
+    color: #17171c;
+    font-size: 1rem;
+    line-height: 2.8125rem;
+  }
   .container .aboutHid {
-    display: none;
-    grid-template-columns: 100%;
-    grid-template-rows: 50vh 65vh 50vh 60vh;
-    width: 100%; }
-    .container .aboutHid .aboutHidItem1 {
-      overflow-y: hidden; }
-      .container .aboutHid .aboutHidItem1 img {
-        width: 100%;
-        height: auto; }
-    @supports (object-fit: cover) {
-      .container .aboutHid .aboutHidItem1 img {
-        height: 100%;
-        object-fit: cover;
-        object-position: center center; } }
-    .container .aboutHid .aboutHidItem2 {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      padding-left: 2.625rem;
-      padding-right: 4.5rem;
-      background-color: #17171C; }
-      .container .aboutHid .aboutHidItem2 .aboutHidTitle1 {
-        font-family: "Comfortaa-Regular";
-        color: #E9E9ED;
-        font-size: 1.875rem; }
-      .container .aboutHid .aboutHidItem2 .aboutHidDesc1 {
-        font-family: "Urbanist-Regular";
-        color: #E9E9ED;
-        font-size: 0.875rem;
-        line-height: 1.875rem; }
-    .container .aboutHid .aboutHidItem3 {
-      overflow-y: hidden; }
-      .container .aboutHid .aboutHidItem3 img {
-        width: 100%;
-        height: auto; }
-    @supports (object-fit: cover) {
-      .container .aboutHid .aboutHidItem3 img {
-        height: 100%;
-        object-fit: cover;
-        object-position: center center; } }
-    .container .aboutHid .aboutHidItem4 {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      padding-left: 2.625rem;
-      padding-right: 4.5rem;
-      background-color: #B2B0BF; }
-      .container .aboutHid .aboutHidItem4 .aboutHidTitle2 {
-        font-family: "Comfortaa-Regular";
-        color: #17171C;
-        font-size: 1.875rem; }
-      .container .aboutHid .aboutHidItem4 .aboutHidDesc2 {
-        font-family: "Urbanist-Regular";
-        color: #17171C;
-        font-size: 0.9375rem;
-        line-height: 1.875rem; }
-      .container .aboutHid .aboutHidItem4 .readLessAbout {
-        font-family: "Comfortaa-Semibold";
-        color: #17171C;
-        font-size: 0.875rem; }
-      .container .aboutHid .aboutHidItem4 .readLessAbout:hover {
-        text-decoration: underline; }
+    grid-template-rows: 50vh 50vh 50vh 50vh;
+  }
+  .container .aboutHid .aboutHidItem2 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .container .aboutHid .aboutHidItem2 .aboutHidDesc1 {
+    font-family: "Urbanist-Regular";
+    color: #e9e9ed;
+    font-size: 1rem;
+    line-height: 2.1875rem;
+  }
+  .container .aboutHid .aboutHidItem4 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .container .aboutHid .aboutHidItem4 .aboutHidDesc2 {
+    font-size: 1rem;
+    line-height: 2.1875rem;
+  }
+  .container .aboutHid .aboutHidItem4 .readLessAbout {
+    font-size: 1rem;
+  }
   .container .skills {
-    height: auto;
-    width: 100%;
+    gap: 6.25rem;
+    padding-top: 3.125rem;
+    padding-bottom: 7.5rem;
+  }
+  .container .skills .skillsTitle {
+    margin-left: 5rem;
+    font-size: 2.0625rem;
+  }
+  .container .skills .skillsGrid .titleSkItem {
+    font-size: 1.5rem;
+  }
+  .container .skills .skillsGrid .skItem1,
+  .container .skills .skillsGrid .skItem2,
+  .container .skills .skillsGrid .skItem3,
+  .container .skills .skillsGrid .skItem4,
+  .container .skills .skillsGrid .skItem5 {
+    padding-right: 5rem;
+    padding-left: 5rem;
+    gap: 6.25rem;
+    margin-top: 2.5rem;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox,
+  .container .skills .skillsGrid .skItem2 .iconItemBox,
+  .container .skills .skillsGrid .skItem3 .iconItemBox,
+  .container .skills .skillsGrid .skItem4 .iconItemBox,
+  .container .skills .skillsGrid .skItem5 .iconItemBox {
+    gap: 3.125rem;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox {
+    width: 5.625rem;
+    height: 7.5rem;
+    gap: 1.875rem;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox img {
+    width: 3.75rem;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox .iconName {
+    font-size: 1rem;
+  }
+  .container .skills .skillsGrid #seeMore {
+    font-size: 1rem;
+  }
+  .container .projects {
+    display: flex;
+  }
+  .container .projects .portrait .projectsTitle {
+    transform: translate(37%, 1400%);
+    font-size: 2.0625rem;
+  }
+  .container .projects .containerProjects .projectsGrid {
+    row-gap: 1%;
+    padding-top: 3.125rem;
+    margin-bottom: 3.125rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .container .projects .containerProjects .projectsGrid .project .projectHover {
+    width: 60%;
+    height: 35vh;
+    margin-left: 2.5rem;
+    margin-top: 11.875rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .projectHover
+    .projectName {
+    font-size: 1.5rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .projectHover
+    .projectDesc {
+    line-height: 2.1875rem;
+    font-size: 1rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .projectHover
+    input {
+    width: 15vw;
+    font-size: 1rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .closeModal {
+    width: 1.875rem;
+    height: 2.1875rem;
+    padding-left: 0.3125rem;
+    position: absolute;
+    right: 0rem;
+    cursor: pointer;
+
+    top: 0rem;
+    font-family: "Urbanist-Regular";
+    color: #17171c;
+    font-size: 1.875rem;
+    background-color: rgba(255, 255, 255, 0.445);
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent {
+    grid-template-rows: 45% 55%;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalTextContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 0.625rem;
+    padding-left: 1.875rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalTextContainer
+    .modalInfo {
+    font-size: 1rem;
+    line-height: 1.875rem;
+  }
+  @supports (object-fit: cover) {
+    .container .projects .containerProjects .projectsGrid .project .projectImg {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+  .container .footer {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    gap: 3.125rem;
+  }
+  .container .footer h1 {
+    font-size: 2.0625rem;
+  }
+  .container .footer .contact {
+    line-height: 2.1875rem;
+  }
+  .container .footer .icons {
+    gap: 1.875rem;
+  }
+  .container .footer .icons i {
+    font-size: 1.75rem;
+  }
+  .container .footer .otherOption {
+    line-height: 2.1875rem;
+    font-size: 1.25rem;
+  }
+  .container .footer small {
+    font-size: 0.9375rem;
+  }
+}
+@media (min-width: 56.25rem) {
+  .container .principal .navbarHid {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .container .principal .navbarHid .logo {
+    width: 6.25rem;
+    height: 2.8125rem;
+  }
+  .container .principal .navHid {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .container .principal .navHid ul {
+    gap: 2.1875rem;
+  }
+  .container .principal .card {
+    position: relative;
+    bottom: 0rem;
+    left: 10%;
+    width: 25%;
+    height: 13%;
+    gap: 0.625rem;
+  }
+  .container .principal .card .dev {
+    font-size: 0.9375rem;
+  }
+  .container .principal .principalImg {
+    position: relative;
+    top: 6.25rem;
+    width: 12.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .container .principal .principalImg .zep {
+    width: 11.25rem;
+  }
+  .container .principal .principalImg .bugcat {
+    position: absolute;
+    left: 7.5rem;
+    bottom: 0rem;
+    width: 4.375rem;
+  }
+  .container .aboutVis {
+    position: relative;
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    overflow-y: hidden;
+  }
+  .container .aboutVis .aboutVisDesc {
+    font-size: 1rem;
+    line-height: 2.1875rem;
+    overflow-y: hidden;
+  }
+  .container .aboutHid {
+    display: none;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100vh 100vh;
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .container .aboutHid .aboutHidItem2 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    justify-content: center;
+    gap: 4.375rem;
+  }
+  .container .aboutHid .aboutHidItem2 .aboutHidDesc1 {
+    font-size: 1rem;
+    line-height: 2.1875rem;
+  }
+  .container .aboutHid .aboutHidItem3 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .container .aboutHid .aboutHidItem4 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    gap: 4.375rem;
+    grid-column: 1/2;
+  }
+  .container .aboutHid .aboutHidItem4 .aboutHidDesc2 {
+    font-size: 1rem;
+    line-height: 2.1875rem;
+  }
+  .container .aboutHid .aboutHidItem4 .readLessAbout {
+    font-size: 16;
+  }
+  .container .skills {
     gap: 3.75rem;
     padding-top: 5.625rem;
     padding-bottom: 5.625rem;
-    background-color: #E9E9ED; }
-    .container .skills .skillsTitle {
-      margin-left: 2.625rem;
-      font-family: "Comfortaa-Regular";
-      color: #17171C;
-      font-size: 1.875rem; }
-    .container .skills .skillsGrid {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: auto auto auto auto auto;
-      gap: 5rem; }
-      .container .skills .skillsGrid .titleSkItem {
-        font-family: "Comfortaa-Regular";
-        color: #17171C;
-        font-size: 1.25rem; }
-      .container .skills .skillsGrid .skItem1,
-      .container .skills .skillsGrid .skItem2,
-      .container .skills .skillsGrid .skItem3,
-      .container .skills .skillsGrid .skItem4,
-      .container .skills .skillsGrid .skItem5 {
-        padding-right: 2.625rem;
-        padding-left: 2.625rem;
-        display: flex;
-        flex-direction: column;
-        gap: 3.75rem;
-        justify-content: space-around;
-        overflow-y: hidden; }
-        .container .skills .skillsGrid .skItem1 .iconItemBox,
-        .container .skills .skillsGrid .skItem2 .iconItemBox,
-        .container .skills .skillsGrid .skItem3 .iconItemBox,
-        .container .skills .skillsGrid .skItem4 .iconItemBox,
-        .container .skills .skillsGrid .skItem5 .iconItemBox {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-evenly;
-          gap: 1.875rem; }
-          .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox,
-          .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox,
-          .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox,
-          .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox,
-          .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 5.625rem;
-            height: 7.5rem;
-            gap: 1.25rem; }
-            .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox img,
-            .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox img,
-            .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox img,
-            .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox img,
-            .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox img {
-              width: 3.125rem; }
-            .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox .iconName,
-            .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox .iconName,
-            .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox .iconName,
-            .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox .iconName,
-            .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox .iconName {
-              font-family: "Urbanist-Regular";
-              color: #17171C;
-              font-size: 0.9375rem; }
-          .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox:hover,
-          .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox:hover,
-          .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox:hover,
-          .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox:hover,
-          .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox:hover {
-            background-color: #17171c33; }
-      .container .skills .skillsGrid .skItem2.hid,
-      .container .skills .skillsGrid .skItem3.hid,
-      .container .skills .skillsGrid .skItem4.hid,
-      .container .skills .skillsGrid .skItem5.hid {
-        display: none; }
-      .container .skills .skillsGrid #seeMore {
-        height: 1.875rem;
-        width: 4.375rem;
-        text-align: left;
-        font-family: "Comfortaa-SemiBold";
-        color: #17171C;
-        font-size: 0.9375rem;
-        border: none;
-        background-color: transparent; }
-      .container .skills .skillsGrid #seeMore:hover {
-        text-decoration: underline; }
-    .container .skills .skillsGrid.dis {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: auto;
-      gap: 5rem; }
+  }
+  .container .skills .skillsTitle {
+    margin-left: 5rem;
+  }
+  .container .skills .skillsGrid {
+    gap: 5rem;
+  }
+  .container .skills .skillsGrid .titleSkItem {
+    font-size: 1.375rem;
+  }
+  .container .skills .skillsGrid .skItem1,
+  .container .skills .skillsGrid .skItem2,
+  .container .skills .skillsGrid .skItem3,
+  .container .skills .skillsGrid .skItem4,
+  .container .skills .skillsGrid .skItem5 {
+    padding-right: 5rem;
+    padding-left: 5rem;
+    gap: 5rem;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox,
+  .container .skills .skillsGrid .skItem2 .iconItemBox,
+  .container .skills .skillsGrid .skItem3 .iconItemBox,
+  .container .skills .skillsGrid .skItem4 .iconItemBox,
+  .container .skills .skillsGrid .skItem5 .iconItemBox {
+    gap: 3.125rem;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox {
+    width: 6.875rem;
+    height: 8.75rem;
+    gap: 1.875rem;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox img {
+    width: 3.125rem;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox .iconName {
+    font-size: 1rem;
+  }
+  .container .skills .skillsGrid #seeMore {
+    font-size: 1rem;
+  }
   .container .projects {
     width: 100%;
     height: auto;
-    background-color: #E9E9ED;
+    background-color: #e9e9ed;
     display: flex;
-    flex-direction: column; }
-    .container .projects .portrait {
-      height: 100vh;
-      overflow-y: hidden;
-      display: inline-block;
-      text-align: center; }
-      .container .projects .portrait .projectsTitle {
-        position: absolute;
-        transform: translate(20%, 1100%);
-        font-family: "Comfortaa-SemiBold";
-        color: #E9E9ED;
-        font-size: 1.875rem; }
-    @supports (object-fit: cover) {
-      .container .projects .portrait img {
-        height: 100%;
-        object-fit: cover;
-        object-position: center center; } }
-    .container .projects .containerProjects .projectsGrid {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: auto auto auto auto auto;
-      row-gap: 1%;
-      padding-top: 2.5rem;
-      padding-bottom: 7.5rem;
-      padding-left: 2.625rem;
-      padding-right: 2.625rem;
-      overflow-y: hidden; }
-      .container .projects .containerProjects .projectsGrid .project:hover .projectImg {
-        filter: brightness(0.75); }
-      .container .projects .containerProjects .projectsGrid .project:hover .projectHover {
-        opacity: 1; }
-      .container .projects .containerProjects .projectsGrid .project {
-        height: 50vh;
-        width: auto;
-        overflow-y: hidden;
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap; }
-        .container .projects .containerProjects .projectsGrid .project .projectImg {
-          width: 100%;
-          height: auto;
-          filter: brightness(0.4); }
-        .container .projects .containerProjects .projectsGrid .project .projectHover {
-          width: 50%;
-          height: 35vh;
-          margin-left: 1.875rem;
-          margin-top: 3.75rem;
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-          gap: 1.25rem;
-          overflow-y: hidden;
-          opacity: 0; }
-          .container .projects .containerProjects .projectsGrid .project .projectHover .projectName {
-            font-family: "Comfortaa-Regular";
-            color: #E9E9ED;
-            font-size: 1.25rem; }
-          .container .projects .containerProjects .projectsGrid .project .projectHover .projectDesc {
-            overflow-y: hidden;
-            line-height: 1.875rem;
-            font-family: "Urbanist-Regular";
-            color: #E9E9ED;
-            font-size: 0.9375rem; }
-          .container .projects .containerProjects .projectsGrid .project .projectHover input {
-            width: 25vw;
-            height: 12%;
-            background-color: #17171c86;
-            backdrop-filter: blur(10);
-            border: none;
-            font-family: "Urbanist-Regular";
-            color: #E9E9ED;
-            font-size: 0.9375rem;
-            text-align: left;
-            padding-left: 0.3125rem; }
-        .container .projects .containerProjects .projectsGrid .project .modalWrapper {
-          background-color: rgba(0, 0, 0, 0.5);
-          backdrop-filter: blur(10px);
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100vh;
-          z-index: 1;
-          display: none; }
-          .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal {
-            width: 70%;
-            height: 70vh;
-            position: relative;
-            top: 15%;
-            margin: 0 auto 0 auto;
-            background-color: #E9E9ED; }
-            .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .closeModal {
-              width: 1.875rem;
-              height: 2.1875rem;
-              padding-left: 0.3125rem;
-              position: absolute;
-              right: 0rem;
-              top: 0rem;
-              overflow-y: hidden;
-              font-family: "Urbanist-Regular";
-              color: #17171C;
-              font-size: 1.875rem;
-              background-color: rgba(255, 255, 255, 0.445); }
-            .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent {
-              height: 100%;
-              display: grid;
-              grid-template-columns: 100%;
-              grid-template-rows: 35% 65%; }
-              .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalImgContainer {
-                width: 100%;
-                overflow-y: hidden; }
-                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalImgContainer .modalImg {
-                  width: 100%;
-                  height: auto; }
-              .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                gap: 0.625rem;
-                padding-left: 1.25rem;
-                padding-right: 2.5rem; }
-                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .modalTitle {
-                  font-family: "Comfortaa-Regular";
-                  color: #17171C;
-                  font-size: 1.5625rem; }
-                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .modalInfo {
-                  font-family: "Urbanist-Regular";
-                  color: #17171C;
-                  font-size: 0.9375rem; }
-                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .projectLink {
-                  font-family: "Urbanist-Semibold";
-                  color: #17171C;
-                  font-size: 1.125rem;
-                  text-decoration: none; }
-            @supports (object-fit: cover) {
-              .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalImgContainer .modalImg {
-                height: 100%;
-                object-fit: cover;
-                object-position: center center; } }
-      @supports (object-fit: cover) {
-        .container .projects .containerProjects .projectsGrid .project .projectImg {
-          height: 100%;
-          object-fit: cover;
-          object-position: center center; } }
+    flex-direction: column;
+  }
+  .container .projects .portrait {
+    width: 100vw;
+    overflow-y: hidden;
+    text-align: center;
+  }
+  .container .projects .portrait .projectsTitle {
+    position: absolute;
+    transform: translate(20%, 900%);
+  }
+  .container .projects .portrait img {
+    width: 110%;
+  }
+  .container .projects .containerProjects .projectsGrid {
+    padding-top: 3.75rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .container .projects .containerProjects .projectsGrid .project {
+    height: 50vh;
+    width: auto;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .container .projects .containerProjects .projectsGrid .project .projectImg {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.4);
+  }
+  .container .projects .containerProjects .projectsGrid .project .projectHover {
+    margin-left: 2.5rem;
+    margin-top: 5rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .projectHover
+    .projectName {
+    font-size: 1.375rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .projectHover
+    .projectDesc {
+    line-height: 2.1875rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal {
+    width: 28%;
+    height: 70vh;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent {
+    grid-template-rows: 40% 60%;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalTextContainer {
+    padding-left: 1.25rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalTextContainer
+    .modalTitle {
+    font-size: 1.375rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalTextContainer
+    .projectLink {
+    font-size: 0.9375rem;
+  }
   .container .footer {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 3.75rem;
+    overflow-y: hidden;
+  }
+  .container .footer .icons {
+    gap: 1.875rem;
+  }
+  .container .footer .icons i {
+    font-size: 1.625rem;
+  }
+  .container .footer small {
+    bottom: -0.625rem;
+  }
+}
+@media (min-width: 65.625rem) {
+  .container .principal .navbarVis {
+    height: 4.375rem;
+    width: 40.625rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    gap: 4.0625rem;
+    padding-top: 0.9375rem;
+    margin-left: 6.875rem;
+    border-bottom: #e9e9ed 0.125rem solid;
+  }
+  .container .principal .navbarVis .logoDesk {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 5.625rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: #17171c 0.125rem solid;
+    text-align: right;
+  }
+  .container .principal .navbarVis .logoDesk .logoDeskContent {
+    text-decoration: none;
+    font-family: "Comfortaa-Regular";
+    color: #17171c;
+    font-size: 1.875rem;
+  }
+  .container .principal .navbarVis .logoDesk:hover {
+    background-color: #17171c;
+    border: #e9e9ed 0.125rem solid;
+  }
+  .container .principal .navbarVis .logoDesk:hover .logoDeskContent {
+    color: #e9e9ed;
+  }
+  .container .principal .navbarVis ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3.4375rem;
+  }
+  .container .principal .navbarVis ul li a {
+    text-decoration: none;
+    font-family: "Urbanist-Regular";
+    color: #17171c;
+    font-size: 1.125rem;
+  }
+  .container .principal .navbarVis ul li a:hover {
+    font-weight: bold;
+  }
+  .container .principal .navbarHid {
+    display: none;
+  }
+  .container .principal .card {
+    position: relative;
+    left: 6.25rem;
+    bottom: 6.875rem;
+    width: 19.375rem;
+    height: 6.25rem;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.5625rem;
+  }
+  .container .principal .card .name {
+    font-size: 1.625rem;
+  }
+  .container .principal .card .dev {
+    font-size: 1.125rem;
+  }
+  .container .principal .principalImg {
+    position: relative;
+    top: 5rem;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .principal .principalImg .zep {
+    position: relative;
+    width: 13.125rem;
+  }
+  .container .principal .principalImg .bugcat {
+    position: relative;
+    width: 5rem;
+    bottom: 3.75rem;
+    left: 8.125rem;
+  }
+  .container .sqr2 {
+    width: 100%;
+    height: 6.25rem;
+    background-color: #17171c;
+  }
+  .container .sqr2 .navbarParallax {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 5rem;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 4.0625rem;
+    padding-left: 6.875rem;
+    background-color: #17171c;
+    z-index: 10;
+  }
+  .container .sqr2 .navbarParallax .logoDesk {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 5.625rem;
+    height: 2.5rem;
+    background-color: #17171c;
+    border: #e9e9ed 0.0625rem solid;
+    text-align: right;
+  }
+  .container .sqr2 .navbarParallax .logoDesk .logoDeskContent {
+    text-decoration: none;
+    font-family: "Comfortaa-Regular";
+    color: #e9e9ed;
+    font-size: 1.875rem;
+  }
+  .container .sqr2 .navbarParallax .logoDesk:hover {
+    background-color: #17171c;
+    border: #e9e9ed 0.125rem solid;
+  }
+  .container .sqr2 .navbarParallax .logoDesk:hover .logoDeskContent {
+    color: #e9e9ed;
+    font-weight: bold;
+  }
+  .container .sqr2 .navbarParallax ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3.4375rem;
+  }
+  .container .sqr2 .navbarParallax ul li a {
+    text-decoration: none;
+    font-family: "Urbanist-Regular";
+    color: #e9e9ed;
+    font-size: 1.125rem;
+  }
+  .container .sqr2 .navbarParallax ul li a:hover {
+    font-weight: bold;
+  }
+  .container .aboutVis {
+    position: relative;
     width: 100%;
     height: 100vh;
-    padding-left: 2.625rem;
-    padding-right: 2.625rem;
+    gap: 2.5rem;
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+    z-index: 0;
+    background-color: #e9e9ed;
+  }
+  .container .aboutVis .titleAboutVis {
+    font-size: 2.1875rem;
+  }
+  .container .aboutVis .aboutVisDesc {
+    font-size: 1.125rem;
+    line-height: 2.1875rem;
+  }
+  .container .aboutVis .readMoreAbout {
+    font-size: 1.125rem;
+  }
+  .container .aboutHid {
+    display: none;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100vh 100vh;
+  }
+  .container .aboutHid .aboutHidItem2 {
     display: flex;
-    justify-content: center;
-    gap: 1.875rem;
     flex-direction: column;
-    background-color: #17171C; }
-    .container .footer h1 {
-      text-align: left;
-      line-height: 2.5rem;
-      font-family: "Comfortaa-Regular";
-      color: #E9E9ED;
-      font-size: 1.875rem; }
-    .container .footer .contact {
-      text-align: left;
-      line-height: 1.875rem;
-      font-family: "Urbanist-Regular";
-      color: #E9E9ED;
-      font-size: 1.25rem; }
-    .container .footer .icons {
-      display: flex;
-      gap: 1.25rem; }
-      .container .footer .icons i {
-        font-size: 1.5rem;
-        color: #E9E9ED; }
-    .container .footer .otherOption {
-      text-align: left;
-      line-height: 1.875rem;
-      font-family: "Urbanist-Regular";
-      color: #E9E9ED;
-      font-size: 1.125rem; }
-      .container .footer .otherOption span {
-        font-weight: bold; }
-    .container .footer small {
-      font-family: "Urbanist-Regular";
-      color: #17171C;
-      font-size: 0.875rem;
-      position: relative;
-      bottom: -9.375rem;
-      align-self: flex-end;
-      color: #E9E9ED; }
-  @media (min-width: 37.5rem) {
-    .container .principal {
-      display: flex;
-      /* NAV */ }
-      .container .principal .navbarHid {
-        height: 5rem;
-        padding-left: 5rem;
-        padding-right: 5rem;
-        z-index: 4; }
-        .container .principal .navbarHid .logohid {
-          box-sizing: border-box;
-          width: 6.25rem;
-          height: 2.8125rem;
-          position: relative;
-          display: flex;
-          justify-content: flex-end; }
-          .container .principal .navbarHid .logohid .contentLogo span {
-            font-family: "Comfortaa-Light";
-            color: #17171C;
-            font-size: 2rem; }
-      .container .principal .navHid {
-        padding-left: 5rem;
-        padding-right: 5rem;
-        z-index: 3;
-        top: 1.875rem; }
-        .container .principal .navHid ul {
-          gap: 3.125rem; }
-          .container .principal .navHid ul li a {
-            font-size: 1.0625rem; }
-      .container .principal .card {
-        bottom: 4.375rem;
-        height: 6.875rem;
-        margin-left: 1.25rem; }
-        .container .principal .card .dev {
-          font-size: 1rem; }
-      .container .principal .principalImg {
-        position: relative;
-        top: 6.25rem; }
-        .container .principal .principalImg .zep {
-          position: relative;
-          width: 18.75rem; }
-        .container .principal .principalImg .bugcat {
-          width: 7.5rem;
-          bottom: 6.25rem;
-          left: 11.875rem; }
-    .container .aboutVis {
-      height: 90vh;
-      gap: 5.625rem;
-      padding-left: 5rem;
-      padding-right: 5rem; }
-      .container .aboutVis .titleAboutVis {
-        font-size: 2.0625rem; }
-      .container .aboutVis .aboutVisDesc {
-        font-family: "Urbanist-Regular";
-        color: #17171C;
-        font-size: 1rem;
-        line-height: 2.8125rem; }
-    .container .aboutHid {
-      grid-template-rows: 50vh 50vh 50vh 50vh; }
-      .container .aboutHid .aboutHidItem2 {
-        padding-left: 5rem;
-        padding-right: 5rem; }
-        .container .aboutHid .aboutHidItem2 .aboutHidDesc1 {
-          font-family: "Urbanist-Regular";
-          color: #E9E9ED;
-          font-size: 1rem;
-          line-height: 2.1875rem; }
-      .container .aboutHid .aboutHidItem4 {
-        padding-left: 5rem;
-        padding-right: 5rem; }
-        .container .aboutHid .aboutHidItem4 .aboutHidDesc2 {
-          font-size: 1rem;
-          line-height: 2.1875rem; }
-        .container .aboutHid .aboutHidItem4 .readLessAbout {
-          font-size: 1rem; }
-    .container .skills {
-      gap: 6.25rem;
-      padding-top: 3.125rem;
-      padding-bottom: 7.5rem; }
-      .container .skills .skillsTitle {
-        margin-left: 5rem;
-        font-size: 2.0625rem; }
-      .container .skills .skillsGrid .titleSkItem {
-        font-size: 1.5rem; }
-      .container .skills .skillsGrid .skItem1,
-      .container .skills .skillsGrid .skItem2,
-      .container .skills .skillsGrid .skItem3,
-      .container .skills .skillsGrid .skItem4,
-      .container .skills .skillsGrid .skItem5 {
-        padding-right: 5rem;
-        padding-left: 5rem;
-        gap: 6.25rem;
-        margin-top: 2.5rem; }
-        .container .skills .skillsGrid .skItem1 .iconItemBox,
-        .container .skills .skillsGrid .skItem2 .iconItemBox,
-        .container .skills .skillsGrid .skItem3 .iconItemBox,
-        .container .skills .skillsGrid .skItem4 .iconItemBox,
-        .container .skills .skillsGrid .skItem5 .iconItemBox {
-          gap: 3.125rem; }
-          .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox,
-          .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox,
-          .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox,
-          .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox,
-          .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox {
-            width: 5.625rem;
-            height: 7.5rem;
-            gap: 1.875rem; }
-            .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox img,
-            .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox img,
-            .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox img,
-            .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox img,
-            .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox img {
-              width: 3.75rem; }
-            .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox .iconName,
-            .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox .iconName,
-            .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox .iconName,
-            .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox .iconName,
-            .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox .iconName {
-              font-size: 1rem; }
-      .container .skills .skillsGrid #seeMore {
-        font-size: 1rem; }
-    .container .projects {
-      display: flex; }
-      .container .projects .portrait .projectsTitle {
-        transform: translate(37%, 1400%);
-        font-size: 2.0625rem; }
-      .container .projects .containerProjects .projectsGrid {
-        row-gap: 1%;
-        padding-top: 3.125rem;
-        margin-bottom: 3.125rem;
-        padding-left: 5rem;
-        padding-right: 5rem; }
-        .container .projects .containerProjects .projectsGrid .project .projectHover {
-          width: 60%;
-          height: 35vh;
-          margin-left: 2.5rem;
-          margin-top: 11.875rem; }
-          .container .projects .containerProjects .projectsGrid .project .projectHover .projectName {
-            font-size: 1.5rem; }
-          .container .projects .containerProjects .projectsGrid .project .projectHover .projectDesc {
-            line-height: 2.1875rem;
-            font-size: 1rem; }
-          .container .projects .containerProjects .projectsGrid .project .projectHover input {
-            width: 15vw;
-            font-size: 1rem; }
-        .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .closeModal {
-          width: 1.875rem;
-          height: 2.1875rem;
-          padding-left: 0.3125rem;
-          position: absolute;
-          right: 0rem;
-          top: 0rem;
-          font-family: "Urbanist-Regular";
-          color: #17171C;
-          font-size: 1.875rem;
-          background-color: rgba(255, 255, 255, 0.445); }
-        .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent {
-          grid-template-rows: 45% 55%; }
-          .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            gap: 0.625rem;
-            padding-left: 1.875rem; }
-            .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .modalInfo {
-              font-size: 1rem;
-              line-height: 1.875rem; }
-        @supports (object-fit: cover) {
-          .container .projects .containerProjects .projectsGrid .project .projectImg {
-            height: 100%;
-            object-fit: cover;
-            object-position: center center; } }
-    .container .footer {
-      padding-left: 5rem;
-      padding-right: 5rem;
-      gap: 3.125rem; }
-      .container .footer h1 {
-        font-size: 2.0625rem; }
-      .container .footer .contact {
-        line-height: 2.1875rem; }
-      .container .footer .icons {
-        gap: 1.875rem; }
-        .container .footer .icons i {
-          font-size: 1.75rem; }
-      .container .footer .otherOption {
-        line-height: 2.1875rem;
-        font-size: 1.25rem; }
-      .container .footer small {
-        font-size: 0.9375rem; } }
-  @media (min-width: 56.25rem) {
-    .container .principal .navbarHid {
-      padding-left: 5rem;
-      padding-right: 5rem; }
-      .container .principal .navbarHid .logo {
-        width: 6.25rem;
-        height: 2.8125rem; }
-    .container .principal .navHid {
-      padding-left: 5rem;
-      padding-right: 5rem; }
-      .container .principal .navHid ul {
-        gap: 2.1875rem; }
-    .container .principal .card {
-      position: relative;
-      bottom: 0rem;
-      left: 10%;
-      width: 25%;
-      height: 13%;
-      gap: 0.625rem; }
-      .container .principal .card .dev {
-        font-size: 0.9375rem; }
-    .container .principal .principalImg {
-      position: relative;
-      top: 6.25rem;
-      width: 12.5rem;
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap; }
-      .container .principal .principalImg .zep {
-        width: 11.25rem; }
-      .container .principal .principalImg .bugcat {
-        position: absolute;
-        left: 7.5rem;
-        bottom: 0rem;
-        width: 4.375rem; }
-    .container .aboutVis {
-      position: relative;
-      width: 100%;
-      padding-left: 5rem;
-      padding-right: 5rem;
-      overflow-y: hidden; }
-      .container .aboutVis .aboutVisDesc {
-        font-size: 1rem;
-        line-height: 2.1875rem;
-        overflow-y: hidden; }
-    .container .aboutHid {
-      display: none;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 100vh 100vh;
-      width: 100%;
-      margin-top: 5rem; }
-      .container .aboutHid .aboutHidItem2 {
-        padding-left: 5rem;
-        padding-right: 5rem;
-        justify-content: center;
-        gap: 4.375rem; }
-        .container .aboutHid .aboutHidItem2 .aboutHidDesc1 {
-          font-size: 1rem;
-          line-height: 2.1875rem; }
-      .container .aboutHid .aboutHidItem3 {
-        grid-column: 2/3;
-        grid-row: 2/3; }
-      .container .aboutHid .aboutHidItem4 {
-        padding-left: 5rem;
-        padding-right: 5rem;
-        gap: 4.375rem;
-        grid-column: 1/2; }
-        .container .aboutHid .aboutHidItem4 .aboutHidDesc2 {
-          font-size: 1rem;
-          line-height: 2.1875rem; }
-        .container .aboutHid .aboutHidItem4 .readLessAbout {
-          font-size: 16; }
-    .container .skills {
-      gap: 3.75rem;
-      padding-top: 5.625rem;
-      padding-bottom: 5.625rem; }
-      .container .skills .skillsTitle {
-        margin-left: 5rem; }
-      .container .skills .skillsGrid {
-        gap: 5rem; }
-        .container .skills .skillsGrid .titleSkItem {
-          font-size: 1.375rem; }
-        .container .skills .skillsGrid .skItem1,
-        .container .skills .skillsGrid .skItem2,
-        .container .skills .skillsGrid .skItem3,
-        .container .skills .skillsGrid .skItem4,
-        .container .skills .skillsGrid .skItem5 {
-          padding-right: 5rem;
-          padding-left: 5rem;
-          gap: 5rem; }
-          .container .skills .skillsGrid .skItem1 .iconItemBox,
-          .container .skills .skillsGrid .skItem2 .iconItemBox,
-          .container .skills .skillsGrid .skItem3 .iconItemBox,
-          .container .skills .skillsGrid .skItem4 .iconItemBox,
-          .container .skills .skillsGrid .skItem5 .iconItemBox {
-            gap: 3.125rem; }
-            .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox,
-            .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox,
-            .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox,
-            .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox,
-            .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox {
-              width: 6.875rem;
-              height: 8.75rem;
-              gap: 1.875rem; }
-              .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox img,
-              .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox img,
-              .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox img,
-              .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox img,
-              .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox img {
-                width: 3.125rem; }
-              .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox .iconName,
-              .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox .iconName,
-              .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox .iconName,
-              .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox .iconName,
-              .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox .iconName {
-                font-size: 1rem; }
-        .container .skills .skillsGrid #seeMore {
-          font-size: 1rem; }
-    .container .projects {
-      width: 100%;
-      height: auto;
-      background-color: #E9E9ED;
-      display: flex;
-      flex-direction: column; }
-      .container .projects .portrait {
-        width: 100vw;
-        overflow-y: hidden;
-        text-align: center; }
-        .container .projects .portrait .projectsTitle {
-          position: absolute;
-          transform: translate(20%, 900%); }
-        .container .projects .portrait img {
-          width: 110%; }
-      .container .projects .containerProjects .projectsGrid {
-        padding-top: 3.75rem;
-        padding-left: 5rem;
-        padding-right: 5rem; }
-        .container .projects .containerProjects .projectsGrid .project {
-          height: 50vh;
-          width: auto;
-          overflow-y: hidden;
-          display: flex;
-          align-items: center;
-          flex-wrap: nowrap; }
-          .container .projects .containerProjects .projectsGrid .project .projectImg {
-            width: 100%;
-            height: auto;
-            filter: brightness(0.4); }
-          .container .projects .containerProjects .projectsGrid .project .projectHover {
-            margin-left: 2.5rem;
-            margin-top: 5rem; }
-            .container .projects .containerProjects .projectsGrid .project .projectHover .projectName {
-              font-size: 1.375rem; }
-            .container .projects .containerProjects .projectsGrid .project .projectHover .projectDesc {
-              line-height: 2.1875rem; }
-          .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal {
-            width: 28%;
-            height: 70vh; }
-            .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent {
-              grid-template-rows: 40% 60%; }
-              .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer {
-                padding-left: 1.25rem; }
-                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .modalTitle {
-                  font-size: 1.375rem; }
-                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .projectLink {
-                  font-size: 0.9375rem; }
-    .container .footer {
-      padding-left: 5rem;
-      padding-right: 5rem;
-      padding-top: 3.75rem;
-      overflow-y: hidden; }
-      .container .footer .icons {
-        gap: 1.875rem; }
-        .container .footer .icons i {
-          font-size: 1.625rem; }
-      .container .footer small {
-        bottom: -0.625rem; } }
-  @media (min-width: 65.625rem) {
-    .container .principal .navbarVis {
-      height: 4.375rem;
-      width: 40.625rem;
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: baseline;
-      gap: 4.0625rem;
-      padding-top: 0.9375rem;
-      margin-left: 6.875rem;
-      border-bottom: #E9E9ED 0.125rem solid; }
-      .container .principal .navbarVis .logoDesk {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 5.625rem;
-        height: 2.5rem;
-        background-color: transparent;
-        border: #17171C 0.125rem solid;
-        text-align: right; }
-        .container .principal .navbarVis .logoDesk .logoDeskContent {
-          text-decoration: none;
-          font-family: "Comfortaa-Regular";
-          color: #17171C;
-          font-size: 1.875rem; }
-      .container .principal .navbarVis .logoDesk:hover {
-        background-color: #17171C;
-        border: #E9E9ED 0.125rem solid; }
-        .container .principal .navbarVis .logoDesk:hover .logoDeskContent {
-          color: #E9E9ED; }
-      .container .principal .navbarVis ul {
-        display: flex;
-        flex-direction: row;
-        gap: 3.4375rem; }
-        .container .principal .navbarVis ul li a {
-          text-decoration: none;
-          font-family: "Urbanist-Regular";
-          color: #17171C;
-          font-size: 1.125rem; }
-        .container .principal .navbarVis ul li a:hover {
-          font-weight: bold; }
-    .container .principal .navbarHid {
-      display: none; }
-    .container .principal .card {
-      position: relative;
-      left: 6.25rem;
-      bottom: 6.875rem;
-      width: 19.375rem;
-      height: 6.25rem;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 1.5625rem; }
-      .container .principal .card .name {
-        font-size: 1.625rem; }
-      .container .principal .card .dev {
-        font-size: 1.125rem; }
-    .container .principal .principalImg {
-      position: relative;
-      top: 5rem;
-      width: auto;
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-      flex-direction: column; }
-      .container .principal .principalImg .zep {
-        position: relative;
-        width: 13.125rem; }
-      .container .principal .principalImg .bugcat {
-        position: relative;
-        width: 5rem;
-        bottom: 3.75rem;
-        left: 8.125rem; }
-    .container .sqr2 {
-      width: 100%;
-      height: 6.25rem;
-      background-color: #17171C; }
-      .container .sqr2 .navbarParallax {
-        display: none;
-        position: fixed;
-        top: 0;
-        height: 5rem;
-        width: 100%;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 4.0625rem;
-        padding-left: 6.875rem;
-        background-color: #17171C;
-        z-index: 10; }
-        .container .sqr2 .navbarParallax .logoDesk {
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          width: 5.625rem;
-          height: 2.5rem;
-          background-color: #17171C;
-          border: #E9E9ED 0.0625rem solid;
-          text-align: right; }
-          .container .sqr2 .navbarParallax .logoDesk .logoDeskContent {
-            text-decoration: none;
-            font-family: "Comfortaa-Regular";
-            color: #E9E9ED;
-            font-size: 1.875rem; }
-        .container .sqr2 .navbarParallax .logoDesk:hover {
-          background-color: #17171C;
-          border: #E9E9ED 0.125rem solid; }
-          .container .sqr2 .navbarParallax .logoDesk:hover .logoDeskContent {
-            color: #E9E9ED;
-            font-weight: bold; }
-        .container .sqr2 .navbarParallax ul {
-          display: flex;
-          flex-direction: row;
-          gap: 3.4375rem; }
-          .container .sqr2 .navbarParallax ul li a {
-            text-decoration: none;
-            font-family: "Urbanist-Regular";
-            color: #E9E9ED;
-            font-size: 1.125rem; }
-          .container .sqr2 .navbarParallax ul li a:hover {
-            font-weight: bold; }
-    .container .aboutVis {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      gap: 2.5rem;
-      padding-left: 6.875rem;
-      padding-right: 6.875rem;
-      z-index: 0;
-      background-color: #E9E9ED; }
-      .container .aboutVis .titleAboutVis {
-        font-size: 2.1875rem; }
-      .container .aboutVis .aboutVisDesc {
-        font-size: 1.125rem;
-        line-height: 2.1875rem; }
-      .container .aboutVis .readMoreAbout {
-        font-size: 1.125rem; }
-    .container .aboutHid {
-      display: none;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 100vh 100vh; }
-      .container .aboutHid .aboutHidItem2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        gap: 0rem;
-        padding: 5rem 8.75rem 5rem 6.875rem;
-        background-color: #17171C; }
-        .container .aboutHid .aboutHidItem2 .aboutHidTitle1 {
-          font-size: 2.5rem;
-          line-height: 3.4375rem;
-          overflow-y: hidden; }
-        .container .aboutHid .aboutHidItem2 .aboutHidDesc1 {
-          font-size: 1.125rem;
-          line-height: 2.1875rem; }
-      .container .aboutHid .aboutHidItem4 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 5rem 6.875rem 5rem 6.875rem; }
-        .container .aboutHid .aboutHidItem4 .aboutHidTitle2 {
-          font-size: 2.5rem; }
-        .container .aboutHid .aboutHidItem4 .aboutHidDesc2 {
-          font-size: 1.125rem;
-          line-height: 2.1875rem; }
-        .container .aboutHid .aboutHidItem4 .readLessAbout {
-          font-size: 1.125rem; }
-    .container .skills {
-      padding-bottom: 9.375rem; }
-      .container .skills .skillsTitle {
-        margin-left: 6.875rem;
-        font-size: 2.1875rem; }
-      .container .skills .skillsGrid {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto auto auto auto;
-        gap: 12.5rem; }
-        .container .skills .skillsGrid .titleSkItem {
-          font-size: 1.875rem;
-          font-family: "Urbanist-Regular"; }
-        .container .skills .skillsGrid .skItem1,
-        .container .skills .skillsGrid .skItem2,
-        .container .skills .skillsGrid .skItem3,
-        .container .skills .skillsGrid .skItem4,
-        .container .skills .skillsGrid .skItem5 {
-          padding-right: 6.875rem;
-          padding-left: 6.875rem;
-          gap: 5rem;
-          overflow-y: hidden; }
-          .container .skills .skillsGrid .skItem1 .iconItemBox,
-          .container .skills .skillsGrid .skItem2 .iconItemBox,
-          .container .skills .skillsGrid .skItem3 .iconItemBox,
-          .container .skills .skillsGrid .skItem4 .iconItemBox,
-          .container .skills .skillsGrid .skItem5 .iconItemBox {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            gap: 1.875rem; }
-            .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox,
-            .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox,
-            .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox,
-            .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox,
-            .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              width: 7.5rem;
-              height: 11.25rem;
-              gap: 2.5rem; }
-              .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox img,
-              .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox img,
-              .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox img,
-              .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox img,
-              .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox img {
-                width: 5rem; }
-              .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox .iconName,
-              .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox .iconName,
-              .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox .iconName,
-              .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox .iconName,
-              .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox .iconName {
-                font-size: 1.125rem; }
-        .container .skills .skillsGrid .skItem2.hid,
-        .container .skills .skillsGrid .skItem3.hid,
-        .container .skills .skillsGrid .skItem4.hid,
-        .container .skills .skillsGrid .skItem5.hid {
-          display: none; }
-        .container .skills .skillsGrid #seeMore {
-          height: 1.875rem;
-          width: 4.375rem;
-          text-align: left;
-          font-family: "Comfortaa-SemiBold";
-          color: #17171C;
-          font-size: 0.9375rem;
-          border: none;
-          background-color: transparent; }
-        .container .skills .skillsGrid #seeMore:hover {
-          text-decoration: underline; }
-      .container .skills .skillsGrid.dis {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        gap: 5rem; }
-    .container .projects .portrait .projectsTitle {
-      position: absolute;
-      transform: translate(48%, 850%);
-      font-size: 2.1875rem; }
-    .container .projects .containerProjects {
-      height: auto; }
-      .container .projects .containerProjects .projectsGrid {
-        height: 170vh;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        row-gap: 0.9375rem;
-        column-gap: 0.9375rem;
-        padding-top: 4.375rem;
-        padding-bottom: 4.375rem;
-        padding-left: 6.875rem;
-        padding-right: 6.875rem;
-        overflow-y: hidden; }
-        .container .projects .containerProjects .projectsGrid .project {
-          height: auto; }
-          .container .projects .containerProjects .projectsGrid .project .projectHover input:hover {
-            background-color: rgba(153, 205, 50, 0.521); }
-          .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal {
-            width: 70%;
-            height: 80vh;
-            position: relative;
-            top: 10%;
-            margin: 0 auto 0 auto;
-            background-color: #17171C; }
-            .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .closeModal {
-              width: 2.8125rem;
-              height: 2.8125rem;
-              padding-left: 0.625rem;
-              position: absolute;
-              right: 0rem;
-              top: 0.625rem;
-              overflow-y: hidden;
-              font-family: "Urbanist-Regular";
-              color: #E9E9ED;
-              font-size: 1.875rem;
-              background-color: transparent; }
-            .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent {
-              height: 100%;
-              display: grid;
-              grid-template-columns: 65% 35%;
-              grid-template-rows: 100%; }
-              .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalImgContainer {
-                width: 100%;
-                overflow-y: hidden; }
-                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalImgContainer .modalImg {
-                  height: 100%; }
-              .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                gap: 0.625rem;
-                padding-left: 2.5rem;
-                padding-right: 3.75rem; }
-                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .modalTitle {
-                  font-family: "Comfortaa-Regular";
-                  color: #E9E9ED;
-                  font-size: 1.5625rem; }
-                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .modalInfo {
-                  font-family: "Urbanist-Regular";
-                  color: #E9E9ED;
-                  font-size: 0.9375rem; }
-                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .projectLink {
-                  font-family: "Urbanist-Semibold";
-                  color: #E9E9ED;
-                  font-size: 1.125rem;
-                  text-decoration: none; }
-                .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalContent .modalTextContainer .projectLink:hover {
-                  color: #BBBAC6; }
-            @supports (object-fit: cover) {
-              .container .projects .containerProjects .projectsGrid .project .modalWrapper .modal .modalImgContainer .modalImg {
-                height: 100%;
-                object-fit: cover;
-                object-position: center center; } }
-        .container .projects .containerProjects .projectsGrid #p1 {
-          grid-column: 1/2;
-          grid-row: 1/2; }
-          .container .projects .containerProjects .projectsGrid #p1 .projectHover {
-            margin-left: 1.875rem;
-            width: 20%; }
-            .container .projects .containerProjects .projectsGrid #p1 .projectHover .projectName {
-              font-size: 1.5625rem; }
-            .container .projects .containerProjects .projectsGrid #p1 .projectHover .projectDesc {
-              font-size: 1rem;
-              line-height: 1.5625rem; }
-            .container .projects .containerProjects .projectsGrid #p1 .projectHover input {
-              width: 6.25rem; }
-        .container .projects .containerProjects .projectsGrid #p2 {
-          grid-column: 2/3;
-          grid-row: 1/2; }
-          .container .projects .containerProjects .projectsGrid #p2 .projectHover {
-            margin-left: 1.875rem;
-            width: 20%; }
-            .container .projects .containerProjects .projectsGrid #p2 .projectHover .projectName {
-              font-size: 1.5625rem; }
-            .container .projects .containerProjects .projectsGrid #p2 .projectHover .projectDesc {
-              font-size: 1rem;
-              line-height: 1.5625rem; }
-            .container .projects .containerProjects .projectsGrid #p2 .projectHover input {
-              width: 6.25rem; }
-        .container .projects .containerProjects .projectsGrid #p3 {
-          grid-column: 3/4;
-          grid-row: 1/3; }
-          .container .projects .containerProjects .projectsGrid #p3 .projectHover {
-            margin-left: 1.875rem;
-            width: 20%; }
-            .container .projects .containerProjects .projectsGrid #p3 .projectHover .projectName {
-              font-size: 1.5625rem; }
-            .container .projects .containerProjects .projectsGrid #p3 .projectHover .projectDesc {
-              font-size: 1.125rem;
-              line-height: 2.5rem; }
-            .container .projects .containerProjects .projectsGrid #p3 .projectHover input {
-              width: 6.25rem; }
-        .container .projects .containerProjects .projectsGrid #p4 {
-          grid-column: 1/3;
-          grid-row: 2/4; }
-          .container .projects .containerProjects .projectsGrid #p4 .projectHover {
-            margin-left: 4.375rem;
-            width: 20%; }
-            .container .projects .containerProjects .projectsGrid #p4 .projectHover .projectName {
-              font-size: 2.5rem;
-              overflow-y: hidden; }
-            .container .projects .containerProjects .projectsGrid #p4 .projectHover .projectDesc {
-              font-size: 1.125rem;
-              line-height: 2.5rem; }
-            .container .projects .containerProjects .projectsGrid #p4 .projectHover input {
-              width: 9.375rem; }
-        .container .projects .containerProjects .projectsGrid #p5 {
-          grid-column: 3/4;
-          grid-row: 3/4; }
-          .container .projects .containerProjects .projectsGrid #p5 .projectHover {
-            margin-left: 1.875rem;
-            width: 20%; }
-            .container .projects .containerProjects .projectsGrid #p5 .projectHover .projectName {
-              font-size: 1.5625rem; }
-            .container .projects .containerProjects .projectsGrid #p5 .projectHover .projectDesc {
-              font-size: 1rem;
-              line-height: 1.5625rem; }
-            .container .projects .containerProjects .projectsGrid #p5 .projectHover input {
-              width: 6.25rem; }
-        @supports (object-fit: cover) {
-          .container .projects .containerProjects .projectsGrid .project .projectImg {
-            height: 100%;
-            object-fit: cover;
-            object-position: center center; } }
-    .container .footer {
-      padding-left: 6.875rem;
-      padding-right: 6.875rem;
-      gap: 3.75rem; }
-      .container .footer h1 {
-        font-size: 2.1875rem;
-        line-height: 2.8125rem; }
-      .container .footer .icons {
-        display: flex;
-        gap: 1.875rem; }
-        .container .footer .icons i {
-          font-size: 1.875rem;
-          color: #E9E9ED; }
-        .container .footer .icons i:hover {
-          color: #BBBAC6; }
-      .container .footer .otherOption {
-        text-align: left;
-        line-height: 1.875rem;
-        font-family: "Urbanist-Regular";
-        color: #E9E9ED;
-        font-size: 1.125rem; }
-        .container .footer .otherOption span {
-          font-weight: bold; }
-        .container .footer .otherOption span:hover {
-          color: #BBBAC6; }
-      .container .footer small {
-        bottom: 0rem; } }
+    justify-content: space-evenly;
+    gap: 0rem;
+    padding: 5rem 8.75rem 5rem 6.875rem;
+    background-color: #17171c;
+  }
+  .container .aboutHid .aboutHidItem2 .aboutHidTitle1 {
+    font-size: 2.5rem;
+    line-height: 3.4375rem;
+    overflow-y: hidden;
+  }
+  .container .aboutHid .aboutHidItem2 .aboutHidDesc1 {
+    font-size: 1.125rem;
+    line-height: 2.1875rem;
+  }
+  .container .aboutHid .aboutHidItem4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5rem 6.875rem 5rem 6.875rem;
+  }
+  .container .aboutHid .aboutHidItem4 .aboutHidTitle2 {
+    font-size: 2.5rem;
+  }
+  .container .aboutHid .aboutHidItem4 .aboutHidDesc2 {
+    font-size: 1.125rem;
+    line-height: 2.1875rem;
+  }
+  .container .aboutHid .aboutHidItem4 .readLessAbout {
+    font-size: 1.125rem;
+  }
+  .container .skills {
+    padding-bottom: 9.375rem;
+  }
+  .container .skills .skillsTitle {
+    margin-left: 6.875rem;
+    font-size: 2.1875rem;
+  }
+  .container .skills .skillsGrid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 12.5rem;
+  }
+  .container .skills .skillsGrid .titleSkItem {
+    font-size: 1.875rem;
+    font-family: "Urbanist-Regular";
+  }
+  .container .skills .skillsGrid .skItem1,
+  .container .skills .skillsGrid .skItem2,
+  .container .skills .skillsGrid .skItem3,
+  .container .skills .skillsGrid .skItem4,
+  .container .skills .skillsGrid .skItem5 {
+    padding-right: 6.875rem;
+    padding-left: 6.875rem;
+    gap: 5rem;
+    overflow-y: hidden;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox,
+  .container .skills .skillsGrid .skItem2 .iconItemBox,
+  .container .skills .skillsGrid .skItem3 .iconItemBox,
+  .container .skills .skillsGrid .skItem4 .iconItemBox,
+  .container .skills .skillsGrid .skItem5 .iconItemBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1.875rem;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox,
+  .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 7.5rem;
+    height: 11.25rem;
+    gap: 2.5rem;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox img,
+  .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox img {
+    width: 5rem;
+  }
+  .container .skills .skillsGrid .skItem1 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem2 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem3 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem4 .iconItemBox .iconBox .iconName,
+  .container .skills .skillsGrid .skItem5 .iconItemBox .iconBox .iconName {
+    font-size: 1.125rem;
+  }
+  .container .skills .skillsGrid .skItem2.hid,
+  .container .skills .skillsGrid .skItem3.hid,
+  .container .skills .skillsGrid .skItem4.hid,
+  .container .skills .skillsGrid .skItem5.hid {
+    display: none;
+  }
+  .container .skills .skillsGrid #seeMore {
+    height: 1.875rem;
+    width: 4.375rem;
+    text-align: left;
+    font-family: "Comfortaa-SemiBold";
+    color: #17171c;
+    font-size: 0.9375rem;
+    border: none;
+    background-color: transparent;
+  }
+  .container .skills .skillsGrid #seeMore:hover {
+    text-decoration: underline;
+  }
+  .container .skills .skillsGrid.dis {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 5rem;
+  }
+  .container .projects .portrait .projectsTitle {
+    position: absolute;
+    transform: translate(48%, 850%);
+    font-size: 2.1875rem;
+  }
+  .container .projects .containerProjects {
+    height: auto;
+  }
+  .container .projects .containerProjects .projectsGrid {
+    height: 170vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 0.9375rem;
+    column-gap: 0.9375rem;
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+    overflow-y: hidden;
+  }
+  .container .projects .containerProjects .projectsGrid .project {
+    height: auto;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .projectHover
+    input:hover {
+    background-color: rgba(153, 205, 50, 0.521);
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal {
+    width: 70%;
+    height: 80vh;
+    position: relative;
+    top: 10%;
+    margin: 0 auto 0 auto;
+    background-color: #17171c;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .closeModal {
+    width: 2.8125rem;
+    height: 2.8125rem;
+    padding-left: 0.625rem;
+    position: absolute;
+    right: 0rem;
+    cursor: pointer;
+
+    top: 0.625rem;
+    overflow-y: hidden;
+    font-family: "Urbanist-Regular";
+    color: #e9e9ed;
+    font-size: 1.875rem;
+    background-color: transparent;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 100%;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalImgContainer {
+    width: 100%;
+    overflow-y: hidden;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalImgContainer
+    .modalImg {
+    height: 100%;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.625rem;
+    padding-left: 2.5rem;
+    padding-right: 3.75rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalTextContainer
+    .modalTitle {
+    font-family: "Comfortaa-Regular";
+    color: #e9e9ed;
+    font-size: 1.5625rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalTextContainer
+    .modalInfo {
+    font-family: "Urbanist-Regular";
+    color: #e9e9ed;
+    font-size: 0.9375rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalTextContainer
+    .projectLink {
+    font-family: "Urbanist-Semibold";
+    color: #e9e9ed;
+    font-size: 1.125rem;
+    text-decoration: none;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    .project
+    .modalWrapper
+    .modal
+    .modalContent
+    .modalTextContainer
+    .projectLink:hover {
+    color: #bbbac6;
+  }
+  @supports (object-fit: cover) {
+    .container
+      .projects
+      .containerProjects
+      .projectsGrid
+      .project
+      .modalWrapper
+      .modal
+      .modalImgContainer
+      .modalImg {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+  .container .projects .containerProjects .projectsGrid #p1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .container .projects .containerProjects .projectsGrid #p1 .projectHover {
+    margin-left: 1.875rem;
+    width: 20%;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p1
+    .projectHover
+    .projectName {
+    font-size: 1.5625rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p1
+    .projectHover
+    .projectDesc {
+    font-size: 1rem;
+    line-height: 1.5625rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p1
+    .projectHover
+    input {
+    width: 6.25rem;
+  }
+  .container .projects .containerProjects .projectsGrid #p2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .container .projects .containerProjects .projectsGrid #p2 .projectHover {
+    margin-left: 1.875rem;
+    width: 20%;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p2
+    .projectHover
+    .projectName {
+    font-size: 1.5625rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p2
+    .projectHover
+    .projectDesc {
+    font-size: 1rem;
+    line-height: 1.5625rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p2
+    .projectHover
+    input {
+    width: 6.25rem;
+  }
+  .container .projects .containerProjects .projectsGrid #p3 {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+  .container .projects .containerProjects .projectsGrid #p3 .projectHover {
+    margin-left: 1.875rem;
+    width: 20%;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p3
+    .projectHover
+    .projectName {
+    font-size: 1.5625rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p3
+    .projectHover
+    .projectDesc {
+    font-size: 1.125rem;
+    line-height: 2.5rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p3
+    .projectHover
+    input {
+    width: 6.25rem;
+  }
+  .container .projects .containerProjects .projectsGrid #p4 {
+    grid-column: 1/3;
+    grid-row: 2/4;
+  }
+  .container .projects .containerProjects .projectsGrid #p4 .projectHover {
+    margin-left: 4.375rem;
+    width: 20%;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p4
+    .projectHover
+    .projectName {
+    font-size: 2.5rem;
+    overflow-y: hidden;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p4
+    .projectHover
+    .projectDesc {
+    font-size: 1.125rem;
+    line-height: 2.5rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p4
+    .projectHover
+    input {
+    width: 9.375rem;
+  }
+  .container .projects .containerProjects .projectsGrid #p5 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .container .projects .containerProjects .projectsGrid #p5 .projectHover {
+    margin-left: 1.875rem;
+    width: 20%;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p5
+    .projectHover
+    .projectName {
+    font-size: 1.5625rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p5
+    .projectHover
+    .projectDesc {
+    font-size: 1rem;
+    line-height: 1.5625rem;
+  }
+  .container
+    .projects
+    .containerProjects
+    .projectsGrid
+    #p5
+    .projectHover
+    input {
+    width: 6.25rem;
+  }
+  @supports (object-fit: cover) {
+    .container .projects .containerProjects .projectsGrid .project .projectImg {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+  .container .footer {
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+    gap: 3.75rem;
+  }
+  .container .footer h1 {
+    font-size: 2.1875rem;
+    line-height: 2.8125rem;
+  }
+  .container .footer .icons {
+    display: flex;
+    gap: 1.875rem;
+  }
+  .container .footer .icons i {
+    font-size: 1.875rem;
+    color: #e9e9ed;
+  }
+  .container .footer .icons i:hover {
+    color: #bbbac6;
+  }
+  .container .footer .otherOption {
+    text-align: left;
+    line-height: 1.875rem;
+    font-family: "Urbanist-Regular";
+    color: #e9e9ed;
+    font-size: 1.125rem;
+  }
+  .container .footer .otherOption span {
+    font-weight: bold;
+  }
+  .container .footer .otherOption span:hover {
+    color: #bbbac6;
+  }
+  .container .footer small {
+    bottom: 0rem;
+  }
+}
